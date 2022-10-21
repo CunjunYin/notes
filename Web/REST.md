@@ -1,0 +1,2 @@
+# Representational state transfer (REST)
+Common web applications designed to provide backend logic, persistent data storage and then serves a graphical user interface to a browser for clients. In this methods  

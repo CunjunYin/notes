@@ -19,7 +19,7 @@ Group multiple events into a signle event. The `signle event` will only fired if
 
 When applying debounce methodology to software, developers can either use `Leading` or `Trailing` implementation to suit the software requirements. The example above is Tailing - triggering function until the events stop firing.
 
-[Debounce source code by Lodash](https://github.com/CunjunYin/notes/blob/e244682ada9ffddb2859d05fe17ab38d10bccc00/Web/assets/Throttle.jpg)
+[Debounce source code by Lodash](https://github.com/CunjunYin/notes/blob/0c9ce866c67d58b588957d82994ced895a562134/Web/assets/Throttle.jpg)
 
 ## 2. Throttle
 Throttle is a methodology to guarantees a function will only be triggered once in a timeframe, by slows down the the flow of the event.

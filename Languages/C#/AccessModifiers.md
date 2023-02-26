@@ -59,7 +59,7 @@ public class AccessDemo
 }
 ```
 
-# Same Assembly with reference
+### Same Assembly with reference
 ```cs
 using SameAssembly.Access;
 namespace Demo;
@@ -78,7 +78,7 @@ class Program
 }
 ```
 
-# Same Assembly with reference and derived
+### Same Assembly with reference and derived
 ```cs
 using SameAssembly.Access;
 namespace SameAssembly.AccessExtension;
@@ -96,7 +96,7 @@ public class AccessDemoExtension: AccessDemo
 }
 ```
 
-# Different Assembly with reference
+### Different Assembly with reference
 ```cs
 using SameAssembly.Access;
 namespace DifferentAssembly;
@@ -115,7 +115,7 @@ class Program
 }
 ```
 
-# Different Assembly with reference and derived
+### Different Assembly with reference and derived
 ```cs
 using SameAssembly.Access;
 namespace DifferentAssembly.AccessExtension;

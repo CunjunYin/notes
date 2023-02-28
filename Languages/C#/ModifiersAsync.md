@@ -6,44 +6,47 @@ In C# Asynchronous programming is typically done using the `async` and `await` k
 
 ### Declear async method
 ```c#
-namespace Async;
-public class AsyncDemo
+public class SimpleAsyncDemo
 {
-    public AsyncDemo() { }
-    public async Task<bool> runAsync()
+    public SimpleAsyncDemo() { }
+
+    public async Task taskAsync()
     {
         var msg = " I slept for ";
-        var task = Task.Run(() => Task1(200, msg));
-        Task2(msg);
-        return await task;
+        var resultAsync = taskAsync(2000, msg);
+
+        task();
+        await resultAsync;
     }
 
-    private bool Task1(int milliseconds, string msg)
+    public async Task taskRunAsync()
     {
-        Thread.Sleep(milliseconds);
-        Console.WriteLine(
-            $"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")} I am Task 1 and{msg}{milliseconds}ms"
-        );
+        var msg = " I slept for ";
+        var resultAsync = Task.Run(() => {
+            Task.Delay(3000);
+            Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")} I am Task 1 and{msg}{3000}ms");
+        });
+
+        task(msg);
+        await resultAsync;
+    }
+
+    private async Task<bool> taskAsync(int milliseconds, string msg)
+    {
+        await Task.Delay(milliseconds);
+        Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")} I am Task 1 and{msg}{milliseconds}ms");
         return true;
     }
 
-    private bool Task2(string msg)
+    private bool task()
     {
         Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")} I am Task 2");
         return true;
     }
 }
-
-namespace Async;
-class Program
-{
-    static void Main(string[] args)
-    {
-        AsyncDemo demo = new AsyncDemo();
-        demo.runAsync().Wait();
-    }
-}
 ```
+
+> The difference between `await Task.Run` and `await` is that `Task.Run` is used to run a method asynchronously on a thread from the thread pool. Generally in CPU-bound situation use Task.Run and for IO bound await keyword for async method.
 
 #### Output
 ```js
@@ -52,9 +55,7 @@ class Program
 ```
 
 ### The use of `async` flag
-When a methods marked with a `async` flag, it indicates that the `await` expression may be used in this method and this method is asynchronous.
-
-When the method is encounters an `await expression`, it will suspended execution code after await expression until the asynchronous code is completed. While the method is suspended, but the method is free to execute other async code before await expression occured.
+When a methods marked with a `async` flag, it indicates that the `await` expression may be used in this method and this method is asynchronous. When the method is encounters an `await expression`, it will suspended execution code after await expression until the asynchronous code is completed. While the method is suspended, but the method is free to execute other async code before await expression occured.
 
 ## Stop Asynchronous code by `Cancellation Token`
 

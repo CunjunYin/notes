@@ -17,8 +17,8 @@ public class Program
 
     private static void signleton()
     {
-        SingletonDemo instance1 = SingletonDemo.GetInstance();
-        SingletonDemo instance2 = SingletonDemo.GetInstance();
+        SingletonDemo instance1 = SingletonDemo.LazyGetInstance();
+        SingletonDemo instance2 = SingletonDemo.LazyGetInstance();
 
         for (int i = 0; i < 5; i++)
         {

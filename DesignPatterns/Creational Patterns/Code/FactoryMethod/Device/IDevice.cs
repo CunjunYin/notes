@@ -1,4 +1,4 @@
-﻿namespace FactoryMethod.Factory;
+﻿namespace FactoryMethod.Device;
 
 public interface IDevice
 {

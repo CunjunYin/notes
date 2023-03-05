@@ -1,4 +1,5 @@
-﻿namespace FactoryMethod.Factory;
+﻿using FactoryMethod.Device;
+namespace FactoryMethod.Factory;
 
 public abstract class DeviceFactory
 {

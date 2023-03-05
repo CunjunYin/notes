@@ -1,4 +1,5 @@
-﻿using FactoryMethod.Factory;
+﻿using FactoryMethod.Device;
+using FactoryMethod.Factory;
 namespace FactoryMethod;
 public class Program
 {
@@ -8,19 +9,19 @@ public class Program
         {
             string OS = args[0];
             IDevice device;
-            if (OS == "laptop")
+            if (OS == "laptop") // dotnet run laptop
             {
                 device = new LaptopFactroy().CreateDevice();
                 device.DeviceType();
             }
 
-            else if (OS == "mobile")
+            else if (OS == "mobile") // dotnet run mobile
             {
                 device = new MobileFactroy().CreateDevice();
                 device.DeviceType();
             }
 
-            else
+            else // dotnet run
             {
                 device = new WatchFactroy().CreateDevice();
                 device.DeviceType();

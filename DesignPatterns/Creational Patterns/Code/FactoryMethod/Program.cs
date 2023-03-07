@@ -21,7 +21,7 @@ public class Program
                 device.DeviceType();
             }
 
-            else // dotnet run
+            else // dotnet run watch
             {
                 device = new WatchFactroy().CreateDevice();
                 device.DeviceType();

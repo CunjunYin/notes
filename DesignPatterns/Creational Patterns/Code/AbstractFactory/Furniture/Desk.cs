@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory.Furniture;
 
-public abstract class Desk
+public interface Desk
 {
-    public abstract string color();
+    public string color();
 }

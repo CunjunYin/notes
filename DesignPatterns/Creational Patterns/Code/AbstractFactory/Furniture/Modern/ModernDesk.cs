@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory.Furniture.Modern;
 
-internal class ModernDesk: Desk
+public class ModernDesk: Desk
 {
-    public override string color()
+    public string color()
     {
         return "White";
     }

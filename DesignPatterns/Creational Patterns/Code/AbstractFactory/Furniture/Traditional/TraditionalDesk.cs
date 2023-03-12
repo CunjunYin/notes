@@ -1,8 +1,8 @@
 ﻿using AbstractFactory.Furniture;
 namespace AbstractFactory.Furniture.Traditional;
-internal class TraditionalDesk : Desk
+public class TraditionalDesk : Desk
 {
-    public override string color()
+    public string color()
     {
         return "brown";
     }

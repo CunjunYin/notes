@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory.Furniture;
 
-public abstract class Chair
+public interface Chair
 {
-    public abstract int height();
+    public int height();
 }

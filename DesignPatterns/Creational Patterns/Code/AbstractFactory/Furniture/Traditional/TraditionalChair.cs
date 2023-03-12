@@ -1,7 +1,7 @@
 ﻿namespace AbstractFactory.Furniture.Traditional;
-internal class TraditionalChair: Chair
+public class TraditionalChair: Chair
 {
-    public override int height()
+    public int height()
     {
         return 55;
     }

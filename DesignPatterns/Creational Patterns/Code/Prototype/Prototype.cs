@@ -1,13 +1,12 @@
-# Prototype
-Prototype is a design pattern to create new objects by copying existing objects, without the need to instantiate a new object from constructor.
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime;
+using System.Text;
+using System.Threading.Tasks;
 
-Use Prototype pattern when:
-1. High resource comsumption at initialization
-2. Creation of object dependent on many dependencies
-3. Constructor is complex
+namespace Prototype;
 
-Example:
-```c#
 public class Prototype
 {
     public string Name { get; set; }
@@ -25,5 +24,3 @@ public class Prototype
         return clone;
     }
 }
-```
-

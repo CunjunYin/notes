@@ -1,5 +1,5 @@
 # Async
-Asynchronous programming can improve a programs's performance, by perform multiple tasks simultaneously. So asynchronous code will not block the application's main thread. While asynchronous programming can improve program performance, but asynchronous programming can be complex, making them difficult to write, debug, and maintain.
+Asynchronous programming is a techbique to improve programs' performance, by perform multiple tasks simultaneously. So asynchronous code will not block the application's main thread. While asynchronous programming can improve program performance, but asynchronous programming can be complex, making them difficult to write, debug, and maintain.
 
 ## Async/Await
 In C# Asynchronous programming is typically done using the `async` and `await` keywords. The async keyword is used to define a method that can be executed asynchronously, and the await keyword is used to wait for the result of an asynchronous operation.

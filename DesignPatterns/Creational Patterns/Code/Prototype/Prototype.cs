@@ -12,12 +12,12 @@ public class Prototype
     public string Name { get; set; }
     public DateTime Date { get; set; }
 
-    public Prototype ShallowCopy()
+    public Prototype ShallowClone()
     {
         return (Prototype)this.MemberwiseClone();
     }
 
-    public Prototype DeepCopy()
+    public Prototype DeepClone()
     {
         Prototype clone = (Prototype)this.MemberwiseClone();
         clone.Date = DateTime.Parse(Date.ToString());

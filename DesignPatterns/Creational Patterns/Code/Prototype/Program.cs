@@ -5,7 +5,7 @@ public class Program
     {
         Prototype prototype = new Prototype()
         {
-            Name= "Test",
+            Name= "prototype",
             Date= DateTime.Now,
 
         };
@@ -13,33 +13,33 @@ public class Program
         Console.WriteLine("========================================");
         Console.WriteLine("Shallow Clone");
         Console.WriteLine("========================================");
-        Prototype cloned = prototype.ShallowCopy();
+        Prototype cloned = prototype.ShallowClone();
         Console.WriteLine("prototype Name: {0}, cloned Name: {1}", prototype.Name, cloned.Name);
         Console.WriteLine("prototype Date: {0}, cloned Date: {1}", prototype.Date, cloned.Date);
 
-        Console.WriteLine("\n========================================");
-        Console.WriteLine("Alter prototype date");
-        Console.WriteLine("========================================");
+        Console.WriteLine("\nAlter prototype date");
+        Console.WriteLine("----------------------------------------");
 
+        prototype.Name = "Modified";
         prototype.Date = DateTime.Now;
         Thread.Sleep(1000);
         Console.WriteLine("prototype {0}, cloned: {1}", prototype.Name, cloned.Name);
         Console.WriteLine("prototype {0}, cloned: {1}", prototype.Date, cloned.Date);
 
-        Console.WriteLine("========================================");
+        Console.WriteLine("\n========================================");
         Console.WriteLine("Deep Clone");
         Console.WriteLine("========================================");
 
-        cloned = prototype.DeepCopy();
+        cloned = prototype.DeepClone();
         Console.WriteLine("prototype Name: {0}, cloned Name: {1}", prototype.Name, cloned.Name);
         Console.WriteLine("prototype Date: {0}, cloned Date: {1}", prototype.Date, cloned.Date);
 
-        Console.WriteLine("\n========================================");
-        Console.WriteLine("Alter prototype date");
-        Console.WriteLine("========================================");
+        Console.WriteLine("\nAlter prototype date");
+        Console.WriteLine("----------------------------------------");
+        prototype.Name = "Modified";
         prototype.Date = DateTime.Now;
         Thread.Sleep(1000);
         Console.WriteLine("prototype {0}, cloned: {1}", prototype.Name, cloned.Name);
-        Console.WriteLine("prototype {0}, cloned: {1}", prototype.Date, cloned.Date);
+        Console.WriteLine("prototype {0}, cloned: {1}\n", prototype.Date, cloned.Date);
     }
 }

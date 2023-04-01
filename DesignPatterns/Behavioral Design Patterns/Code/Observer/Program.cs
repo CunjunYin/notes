@@ -1,17 +1,4 @@
-# Observer
-Observer design pattern is a one to many relationship between objects. When the state of the subject change, it's observers(dependents) will be notified automatically, and they perform any changes to its state based n business needs.
-
-Use observer design pattern when
-* When one object needs to change other objects at the same time
-* When the object dosen't know how how many objects to change beforehand
-
-
-## Example
-
-1. an array field for storing a list of references to subscriber objects
-2. several public methods which allow adding subscribers to and removing them from that list.
-```c#
-namespace Observer;
+﻿namespace Observer;
 
 public interface IObserver
 {
@@ -84,4 +71,3 @@ public class Program
         subject.Notify();
     }
 }
-```

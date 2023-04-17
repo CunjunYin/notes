@@ -1,7 +1,5 @@
-# Command
+﻿using System.Security.Cryptography;
 
-## Example
-```c#
 namespace Command;
 
 public abstract class ICommand
@@ -71,7 +69,7 @@ public class Invoker
 
     public void ExecuteCommands()
     {
-        foreach (ICommand command in this.command)
+        foreach(ICommand command in this.command)
         {
             command.Execute();
         }
@@ -89,4 +87,3 @@ internal class Program
         invoker.ExecuteCommands();
     }
 }
-```

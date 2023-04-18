@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-
-namespace Command;
+﻿namespace Command;
 
 public abstract class ICommand
 {
@@ -69,7 +67,7 @@ public class Invoker
 
     public void ExecuteCommands()
     {
-        foreach(ICommand command in this.command)
+        foreach (ICommand command in this.command)
         {
             command.Execute();
         }

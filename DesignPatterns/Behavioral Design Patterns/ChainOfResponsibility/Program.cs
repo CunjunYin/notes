@@ -1,9 +1,4 @@
-# Chain Of Responsibility
-Chain Of Responsibility is linking objects into a chain, so upon a request, each object decides either to process the request or to pass it to the next object in the chain.
-
-##
-```c#
-abstract class AbstractHandler
+﻿internal abstract class AbstractHandler
 {
     protected AbstractHandler successor;
 
@@ -15,9 +10,8 @@ abstract class AbstractHandler
 
     public abstract void Handle(object request);
 }
-```
-```c#
-class ConcreteHandlerA : AbstractHandler
+
+internal class ConcreteHandlerA : AbstractHandler
 {
     public override void Handle(object request)
     {
@@ -32,7 +26,7 @@ class ConcreteHandlerA : AbstractHandler
     }
 }
 
-class ConcreteHandlerB : AbstractHandler
+internal class ConcreteHandlerB : AbstractHandler
 {
     public override void Handle(object request)
     {
@@ -47,7 +41,7 @@ class ConcreteHandlerB : AbstractHandler
     }
 }
 
-class ConcreteHandlerC : AbstractHandler
+internal class ConcreteHandlerC : AbstractHandler
 {
     public override void Handle(object request)
     {
@@ -61,18 +55,16 @@ class ConcreteHandlerC : AbstractHandler
         }
     }
 }
-```
 
-```c#
-class Program
+internal class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         // The other part of the client code constructs the actual chain.
         var chain = new ConcreteHandlerA();
         chain.SetSuccessor(new ConcreteHandlerB()).SetSuccessor(new ConcreteHandlerC());
 
-        var requests = new List<string>{ "", "Pause", "BadRequest", "Active" };
+        var requests = new List<string> { "", "Pause", "BadRequest", "Active" };
 
         foreach (var request in requests)
         {
@@ -80,4 +72,3 @@ class Program
         }
     }
 }
-```

@@ -1,9 +1,4 @@
-# Mediator
-Mediator restricts direct communications between objects, and use mediator class as intermediary to collaborate. In this way, explicitly references between objects can be eleminated, result lossely coupling.
-
-## Example
-```c#
-namespace Mediator;
+﻿namespace Mediator;
 public interface IMediator
 {
     public void Transfer(object sender, object msg);
@@ -88,4 +83,3 @@ public class Program
         concreteObjectB.Send("Very Good");
     }
 }
-```

@@ -1,8 +1,4 @@
-# Visitor
-
-## Example
-```c#
-public interface IObject
+﻿public interface IObject
 {
     public void Accept(IVisitor visitor);
 }
@@ -35,21 +31,21 @@ public class ConcreteObjectB : IObject
 
 public interface IVisitor
 {
-    public void VisitConcreteObjectA(ConcreteObjectA object);
+    public void VisitConcreteObjectA(ConcreteObjectA obj);
 
-    public void VisitConcreteObjectB(ConcreteObjectB object);
+    public void VisitConcreteObjectB(ConcreteObjectB obj);
 }
 
 public class ConcreteVisitorA : IVisitor
 {
-    public void VisitConcreteObjectA(ConcreteObjectA object)
+    public void VisitConcreteObjectA(ConcreteObjectA obj)
     {
-        Console.WriteLine("VisitConcreteObjectA " + object.ConcreteObjectAMethod());
+        Console.WriteLine("VisitConcreteObjectA " + obj.ConcreteObjectAMethod());
     }
 
-    public void VisitConcreteObjectB(ConcreteObjectB object)
+    public void VisitConcreteObjectB(ConcreteObjectB obj)
     {
-        Console.WriteLine("VisitConcreteObjectB " + object.ConcreteObjectBMethod());
+        Console.WriteLine("VisitConcreteObjectB " + obj.ConcreteObjectBMethod());
     }
 }
 
@@ -93,4 +89,3 @@ public class Program
         client.Accept(vistor);
     }
 }
-```

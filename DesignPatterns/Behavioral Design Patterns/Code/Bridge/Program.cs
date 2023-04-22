@@ -1,13 +1,4 @@
-# Bridge
-Bridge design pattern decouples a large class or a set of closely related classes's abstraction from its implementation. So it consists of two parts - `Abstraction` and the `Implementation`.
-
-The `Abstraction` hierarchy defines the interface for the client and maintain maintains a reference to an Implementation hierarchy and delegates all of the real work to this the Implementation object.
-
-The `Implementation` hierarchy defines the interface for all concrete implementation classes and is used by the Abstraction to delegate work to the Implementation.
-
-## Example
-```csharp
-public interface IAbstraction
+﻿public interface IAbstraction
 {
     public string Operation();
 }
@@ -85,4 +76,3 @@ public class Program
         }
     }
 }
-```

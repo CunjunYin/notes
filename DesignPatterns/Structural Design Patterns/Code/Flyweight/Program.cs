@@ -1,8 +1,4 @@
-# Flyweight
-Flyweight design pattern is based on sharing concept. In Flyweight common objects that are frequently used can be shared. Thus performance and maintainability can be improved.
-
-```c#
-using System.Collections;
+﻿using System.Collections;
 
 public interface IFlyweightObject
 {
@@ -49,4 +45,3 @@ public class Program
         flyweight.FlyweightMethod();
     }
 }
-```

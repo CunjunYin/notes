@@ -1,9 +1,4 @@
-# Facade
-Facade design pattern is used to provide a unified interface to a set of interfaces in a subsystem. This simplified the interaction between complex objects behined Facade class and client. So client can only need to interacts with the facade class in a straightforward manner without having to understand the underlying complexity.
-
-## Example
-```c#
-public class Facade
+﻿public class Facade
 {
     public SubsystemA subsystemA {get; set;}
     public SubsystemB subsystemB {get; set;}
@@ -59,4 +54,3 @@ public class Program
         Console.WriteLine(facade.OperationTwo());
     }
 }
-```

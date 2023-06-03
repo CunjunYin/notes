@@ -9,7 +9,6 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
     {
         builder.HasKey(student => student.Id);
         builder.Property(student => student.Name).IsRequired().HasMaxLength(100);
-        builder.Ignore(student => student.ExcludedString); // Exclude
         builder.ToTable("T_Student"); // Table name
         builder.Property(student => student.Name).HasColumnName("StudentName"); // Change column name
     }

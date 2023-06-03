@@ -8,6 +8,7 @@ public partial class DBContext : DbContext
     public virtual DbSet<Student> Students { get; set; }
     public virtual DbSet<StudentView> StudentsView { get; set; }
     public virtual DbSet<StudentFunction> StudentsFunction { get; set; }
+    public virtual DbSet<IgnoredEntity> IgnoredEntities { get; set; }
     public DBContext()
     { }
 
@@ -23,6 +24,7 @@ public partial class DBContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.HasDefaultSchema("CreateModelDemo");
+        builder.Ignore<IgnoredEntity>();
         builder.ApplyConfiguration<Student>(new StudentConfiguration());
         builder.ApplyConfiguration<StudentFunction>(new StuentFunctionConfiguration());
         builder.ApplyConfiguration<StudentView>(new StuentViewConfiguration());

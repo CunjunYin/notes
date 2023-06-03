@@ -9,5 +9,24 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
     {
         builder.HasKey(course => course.Id);
         builder.Property(course => course.Name).IsRequired().HasMaxLength(100);
+
+        //  Without entity
+        //builder.HasMany(course => course.Students)
+        //    .WithMany(student => student.Courses)
+        //    .UsingEntity<Dictionary<string, object>>(
+        //        "StudentCourse",
+        //        right => right.HasOne<Student>().WithMany().HasForeignKey("StudentId"),
+        //        left => left.HasOne<Course>().WithMany().HasForeignKey("CourseId"),
+        //        join => join.ToTable("StudentCourse").HasKey("StudentId", "CourseId").IsClustered()
+        //    );
+
+        //  With entity 
+        //builder.HasMany(course => course.Students)
+        //    .WithMany(student => student.Courses)
+        //    .UsingEntity<StudentCourse>(
+        //        right => right.HasOne<Student>().WithMany().HasForeignKey("StudentId"),
+        //        left => left.HasOne<Course>().WithMany().HasForeignKey("CourseId"),
+        //        join => join.ToTable("StudentCourse").HasKey("StudentId", "CourseId")
+        //    );
     }
 }

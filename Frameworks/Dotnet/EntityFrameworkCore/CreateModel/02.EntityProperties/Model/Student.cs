@@ -1,4 +1,4 @@
-﻿namespace EntityTypes.Model;
+﻿namespace EntityProperties.Model;
 
 public class Student
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EntityTypes.Model.Configuration;
+namespace EntityProperties.Model.Configuration;
 
 public class StuentFunctionConfiguration : IEntityTypeConfiguration<StudentFunction>
 {

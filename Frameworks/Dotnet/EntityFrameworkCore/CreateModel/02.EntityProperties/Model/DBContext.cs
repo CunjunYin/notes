@@ -1,7 +1,7 @@
-﻿using EntityTypes.Model.Configuration;
+﻿using EntityProperties.Model.Configuration;
 using Microsoft.EntityFrameworkCore;
 
-namespace EntityTypes.Model;
+namespace EntityProperties.Model;
 
 public partial class DBContext : DbContext
 {

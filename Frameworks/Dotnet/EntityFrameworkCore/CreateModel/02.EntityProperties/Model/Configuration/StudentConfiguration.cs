@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EntityTypes.Model.Configuration;
+namespace EntityProperties.Model.Configuration;
 
 public class StudentConfiguration : IEntityTypeConfiguration<Student>
 {
@@ -12,5 +12,6 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
         builder.Ignore(student => student.ExcludedString); // Exclude
         builder.ToTable("T_Student"); // Table name
         builder.Property(student => student.Name).HasColumnName("StudentName"); // Change column name
+        builder.Property(student => student.Courses).HasColumnOrder(0);
     }
 }

@@ -10,6 +10,5 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
         builder.HasKey(student => student.Id);
         builder.Property(student => student.Name).IsRequired().HasMaxLength(100);
         builder.ToTable("T_Student"); // Table name
-        builder.Property(student => student.Name).HasColumnName("StudentName"); // Change column name
     }
 }

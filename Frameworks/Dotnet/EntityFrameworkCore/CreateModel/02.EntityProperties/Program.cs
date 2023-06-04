@@ -1,7 +1,7 @@
-﻿using EntityTypes.Model;
+﻿using EntityProperties.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace EntityTypes;
+namespace EntityProperties;
 
 public class Program
 {

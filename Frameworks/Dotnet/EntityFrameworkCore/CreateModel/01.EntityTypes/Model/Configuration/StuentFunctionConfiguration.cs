@@ -8,7 +8,7 @@ public class StuentFunctionConfiguration : IEntityTypeConfiguration<StudentFunct
     public void Configure(EntityTypeBuilder<StudentFunction> builder)
     {
         builder.HasNoKey().ToFunction("FulltimeStudentFunction");
-        builder.Property(student => student.Name).HasColumnName("StudentName");
-        builder.Property(student => student.NameLength).HasColumnName("len_name");
+        builder.Property(student => student.Name);
+        builder.Property(student => student.NameLength);
     }
 }

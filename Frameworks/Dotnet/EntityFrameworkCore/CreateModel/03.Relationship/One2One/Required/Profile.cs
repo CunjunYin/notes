@@ -1,6 +1,6 @@
 ﻿namespace Relationship.One2One.Required;
 
-// Principal (parent)
+// Dependent (child)
 public class Profile
 {
     public int Id { get; set; }

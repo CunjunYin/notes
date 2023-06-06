@@ -1,4 +1,4 @@
-﻿using Relationship.One2One;
+﻿using Relationship.Many2Many;
 using Microsoft.EntityFrameworkCore;
 
 namespace Relationship;

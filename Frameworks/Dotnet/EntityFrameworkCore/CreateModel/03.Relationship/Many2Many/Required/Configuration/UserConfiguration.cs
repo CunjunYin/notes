@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Relationship.Many2Many.Configuration;
+namespace Relationship.Many2Many.Required.Configuration;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {

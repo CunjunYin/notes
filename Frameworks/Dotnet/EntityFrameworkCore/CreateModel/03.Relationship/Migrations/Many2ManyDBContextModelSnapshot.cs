@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Relationship.One2One;
+using Relationship.Many2Many;
 
 #nullable disable
 
 namespace Relationship.Migrations
 {
-    [DbContext(typeof(One2OneDBContext))]
-    partial class One2OneDBContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(Many2ManyDBContext))]
+    partial class Many2ManyDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,22 @@ namespace Relationship.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Relationship.One2One.Required.Author", b =>
+            modelBuilder.Entity("BookUser", b =>
+                {
+                    b.Property<int>("booksId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("usersId")
+                        .HasColumnType("int");
+
+                    b.HasKey("booksId", "usersId");
+
+                    b.HasIndex("usersId");
+
+                    b.ToTable("BookUser");
+                });
+
+            modelBuilder.Entity("Relationship.Many2Many.Required.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -29,16 +44,16 @@ namespace Relationship.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
+                    b.Property<string>("BookName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("Relationship.One2One.Required.Profile", b =>
+            modelBuilder.Entity("Relationship.Many2Many.Required.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,34 +61,28 @@ namespace Relationship.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AuthorId")
-                        .HasColumnType("int");
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AuthorId")
-                        .IsUnique();
-
-                    b.ToTable("Profiles");
+                    b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Relationship.One2One.Required.Profile", b =>
+            modelBuilder.Entity("BookUser", b =>
                 {
-                    b.HasOne("Relationship.One2One.Required.Author", "Author")
-                        .WithOne("Profile")
-                        .HasForeignKey("Relationship.One2One.Required.Profile", "AuthorId")
+                    b.HasOne("Relationship.Many2Many.Required.Book", null)
+                        .WithMany()
+                        .HasForeignKey("booksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Author");
-                });
-
-            modelBuilder.Entity("Relationship.One2One.Required.Author", b =>
-                {
-                    b.Navigation("Profile");
+                    b.HasOne("Relationship.Many2Many.Required.User", null)
+                        .WithMany()
+                        .HasForeignKey("usersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

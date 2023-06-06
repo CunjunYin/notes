@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Relationship.One2One.Optional;
 
 namespace Relationship.One2One.Required.Configuration;
 

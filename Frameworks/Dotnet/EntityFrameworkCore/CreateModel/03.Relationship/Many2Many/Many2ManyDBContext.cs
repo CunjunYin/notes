@@ -1,18 +1,17 @@
-﻿using Relationship.One2Many.Configuration;
+﻿using Relationship.Many2Many.Required.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Relationship.Many2Many.Required;
 
-namespace Relationship.One2Many;
+namespace Relationship.Many2Many;
 
-public partial class DBContext : DbContext
+public partial class Many2ManyDBContext : DbContext
 {
-    public virtual DbSet<Author> Authors { get; set; }
     public virtual DbSet<User> Users { get; set; }
     public virtual DbSet<Book> Books { get; set; }
-    public virtual DbSet<Profile> Profiles { get; set; }
-    public DBContext()
+    public Many2ManyDBContext()
     { }
 
-    public DBContext(DbContextOptions<DBContext> options) : base(options)
+    public Many2ManyDBContext(DbContextOptions<Many2ManyDBContext> options) : base(options)
     {
     }
 
@@ -23,5 +22,7 @@ public partial class DBContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.ApplyConfiguration(new BookConfiguration());
+        builder.ApplyConfiguration(new UserConfiguration());
     }
 }

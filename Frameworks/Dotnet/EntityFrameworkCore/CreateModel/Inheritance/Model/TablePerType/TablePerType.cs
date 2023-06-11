@@ -18,15 +18,15 @@ public class RssBlog : BlogBase
     public string RssUrl { get; set; }
 }
 
-internal class TablePerType : DbContext
+internal class TablePerConcrete : DbContext
 {
     public DbSet<Blog> Blogs { get; set; }
     public DbSet<RssBlog> RssBlogs { get; set; }
 
-    public TablePerType()
+    public TablePerConcrete()
     { }
 
-    public TablePerType(DbContextOptions<TablePerType> options) : base(options)
+    public TablePerConcrete(DbContextOptions<TablePerConcrete> options) : base(options)
     {
     }
 

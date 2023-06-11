@@ -5,16 +5,15 @@ namespace Inheritance.Model.TablePerConcrete;
 public abstract class BlogBase
 {
     public int Id { get; set; }
+    public string Url { get; set; }
 }
 
 public class Blog : BlogBase
 {
-    public string Url { get; set; }
 }
 
 public class RssBlog : BlogBase
 {
-    public string Url { get; set; }
     public string RssUrl { get; set; }
 }
 

@@ -4,13 +4,6 @@ namespace Core.Middlewares
 {
     public class DemoMiddleware : IMiddleware
     {
-        private readonly RequestDelegate _next;
-
-        public DemoMiddleware(RequestDelegate next)
-        {
-            _next = next;
-        }
-
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             // Log the incoming request path

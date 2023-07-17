@@ -1,8 +1,10 @@
 ﻿using Core;
+using Core.Attributes;
 using Core.Models;
+using Core.Models.Binders;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Rest.Host.Controllers;
+namespace Rest.Controllers;
 
 [Route("api")]
 [ApiController]
@@ -13,6 +15,7 @@ public class DemoController : Controller
 
 
     [HttpGet]
+    [ValidateModel(Order = 1)]
     [Route("get")]
     public async Task<IActionResult> DemoGet(DemoGetModel model)
     {

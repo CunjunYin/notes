@@ -1,8 +1,8 @@
-﻿using Core.Attributes;
-using Core.Models;
+﻿using WebApi.Attributes;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Models;
 
-namespace Rest.Host.Controllers;
+namespace WebApi.Controllers;
 
 [Route("api")]
 [ApiController]
@@ -14,21 +14,25 @@ public class DemoController : Controller
     { }
 
     [HttpGet]
-    [Route("get")]
-    [ValidateModel]
     public async Task<IActionResult> DemoGet(DemoGetModel model)
     {
-        if (ModelState.IsValid)
-        {
-            return Ok();
-        }
-        return NotFound();
+        return Ok();
     }
 
     [HttpPost]
-    [Route("post")]
     public async Task<IActionResult> DemoPost()
     {
-        return NotFound();
+        return StatusCode(403);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> DemoPut(string param)
+    {
+        if (string.IsNullOrWhiteSpace(param))
+        {
+            return BadRequest();
+        }
+
+        return Ok();
     }
 }

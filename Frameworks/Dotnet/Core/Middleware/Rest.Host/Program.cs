@@ -1,4 +1,5 @@
 ﻿using Core.Extensions;
+using Core.Middlewares;
 using Core.Models.Binders;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -11,16 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IModelBinder, DemoGetBinder>();
+builder.Services.AddSingleton<DemoMiddleware>();
 
 var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseDeveloperExceptionPage();
-}
-
 app.Map("/map/seg", HandleMultiSeg); // Segment map
 app.Map("/map", HandleMapTest); // Simple map
 app.Map("/nested", HandleNestedMapTest); // Nested map
@@ -34,15 +28,7 @@ app.Use(async (context, next) =>
 });
 
 app.UseDemoMiddleware();
-
-app.Run(async context =>
-{
-    context.Response.ContentType = "application/json";
-    await context.Response.WriteAsync("{\"satuas\": \"invalid-request\"}");
-});
-
 app.MapControllers();
-
 app.Run();
 
 static void HandleMapTest(IApplicationBuilder app)

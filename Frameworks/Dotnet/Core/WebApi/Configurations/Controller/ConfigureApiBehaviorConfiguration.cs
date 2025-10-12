@@ -7,7 +7,9 @@ public class ConfigureApiBehaviorConfiguration
 {
     public IActionResult DemoInvalidModelStateResponse(ActionContext context)
     {
-        var descroption = context.ModelState.Values.SelectMany(v => v.Errors).FirstOrDefault();
+        var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger>();
+        var descroption = 
+        Values.SelectMany(v => v.Errors).FirstOrDefault();
         var jsonResult = new ContentResult
         {
             StatusCode = 400,

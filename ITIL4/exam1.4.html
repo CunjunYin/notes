@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIL 4 Foundation Exam: Service Management Concepts</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #2c3e50, #4a6491);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 5px solid #fdbb2d;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .exam-info {
+            display: flex;
+            justify-content: space-around;
+            background: #f8f9fa;
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .exam-info div {
+            text-align: center;
+        }
+
+        .exam-info strong {
+            display: block;
+            font-size: 1.3rem;
+            color: #2c3e50;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .question-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .question-number {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .question-type {
+            background: #e74c3c;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .options {
+            margin-bottom: 15px;
+        }
+
+        .option {
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .option:hover {
+            background: #e9ecef;
+        }
+
+        .option.selected {
+            background: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .option.correct {
+            background: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .option.incorrect {
+            background: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .answer-feedback {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 5px;
+            display: none;
+            font-size: 0.95rem;
+        }
+
+        .answer-feedback.correct {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .answer-feedback.incorrect {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+        }
+
+        .btn-success {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #27ae60;
+        }
+
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+
+        .progress-container {
+            background: #f8f9fa;
+            padding: 15px;
+            border-top: 1px solid #dee2e6;
+            text-align: center;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress {
+            height: 100%;
+            background: #2ecc71;
+            width: 10%;
+            transition: width 0.5s;
+        }
+
+        .results {
+            text-align: center;
+            padding: 30px;
+            display: none;
+        }
+
+        .results h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .score {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2ecc71;
+            margin: 20px 0;
+        }
+
+        .results-message {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .exam-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>ITIL 4 Foundation Exam: Service Management Concepts</h1>
+            <p>Test your knowledge of value, organizations, service relationships, and stakeholders</p>
+        </header>
+
+        <div class="exam-info">
+            <div>
+                <strong>40</strong>
+                <span>Questions</span>
+            </div>
+            <div>
+                <strong>30</strong>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <strong>65%</strong>
+                <span>Passing Score</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="questions-container">
+                <!-- Questions will be inserted here by JavaScript -->
+            </div>
+
+            <div class="actions">
+                <button class="btn-secondary" id="prev-btn">Previous Question</button>
+                <button class="btn-primary" id="check-btn">Check Answer</button>
+                <button class="btn-success" id="next-btn">Next Question</button>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div>Progress: <span id="progress-text">1/15</span></div>
+            <div class="progress-bar">
+                <div class="progress" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="results" id="results-container">
+            <h2>Exam Complete!</h2>
+            <div class="score" id="final-score">0%</div>
+            <p class="results-message" id="results-message"></p>
+            <button class="btn-primary" id="restart-btn">Restart Exam</button>
+        </div>
+    </div>
+
+    <script>
+        // ITIL 4 Service Management Questions
+        const questions = [
+            {
+                type: "multiple-choice",
+                text: "What is the definition of 'value' in ITIL 4?",
+                options: [
+                    "The financial profit generated by a service",
+                    "The technical performance of a service",
+                    "The perceived benefits, usefulness, and importance of something",
+                    "The cost savings achieved through service automation"
+                ],
+                correctAnswer: 2,
+                explanation: "Value is defined as the perceived benefits, usefulness, and importance of something. It's subjective and depends on the perspective of stakeholders."
+            },
+            {
+                type: "multiple-choice",
+                text: "Which of the following best defines 'service management'?",
+                options: [
+                    "A set of technical procedures for maintaining IT infrastructure",
+                    "A set of specialized organizational capabilities for enabling value to customers in the form of services",
+                    "A framework for managing service desk operations",
+                    "A methodology for reducing service costs"
+                ],
+                correctAnswer: 1,
+                explanation: "Service management is a set of specialized organizational capabilities for enabling value to customers in the form of services."
+            },
+            {
+                type: "multiple-choice",
+                text: "What is an 'organization' according to ITIL 4?",
+                options: [
+                    "A legal entity registered with government authorities",
+                    "A person or group with functions, responsibilities, and relationships to achieve objectives",
+                    "A corporate structure with shareholders and directors",
+                    "A business unit within a larger enterprise"
+                ],
+                correctAnswer: 1,
+                explanation: "An organization is a person or a group of people that has its own functions with responsibilities, authorities, and relationships to achieve its objectives."
+            },
+            {
+                type: "multiple-choice",
+                text: "Which statement about service relationships is CORRECT?",
+                options: [
+                    "Service providers deliver value unilaterally to consumers",
+                    "Value is co-created through collaboration between providers and consumers",
+                    "Service consumers are passive recipients of value",
+                    "Service relationships are always between external organizations"
+                ],
+                correctAnswer: 1,
+                explanation: "Value is co-created through collaboration between service providers and service consumers in a mutually beneficial relationship."
+            },
+            {
+                type: "multiple-choice",
+                text: "Who defines requirements for services and takes responsibility for outcomes?",
+                options: [
+                    "Users",
+                    "Customers",
+                    "Sponsors",
+                    "Providers"
+                ],
+                correctAnswer: 1,
+                explanation: "Customers define requirements for services and take responsibility for outcomes."
+            },
+            {
+                type: "multiple-choice",
+                text: "Which role authorizes the budget for service consumption?",
+                options: [
+                    "Users",
+                    "Customers",
+                    "Sponsors",
+                    "Providers"
+                ],
+                correctAnswer: 2,
+                explanation: "Sponsors authorize the budget for service consumption."
+            },
+            {
+                type: "multiple-choice",
+                text: "What is a 'product' in ITIL 4?",
+                options: [
+                    "A commercial software application",
+                    "A configuration of organizational resources designed to offer value",
+                    "The final output of a service delivery process",
+                    "A tangible item sold to customers"
+                ],
+                correctAnswer: 1,
+                explanation: "A product is a configuration of an organization's resources designed to offer value for a consumer."
+            },
+            {
+                type: "multiple-choice",
+                text: "What is the relationship between products and services?",
+                options: [
+                    "Services are components of products",
+                    "Products and services are the same thing",
+                    "Services are based on one or more products",
+                    "Products are delivered through service offerings"
+                ],
+                correctAnswer: 2,
+                explanation: "Services are based on one or more of an organization's products."
+            },
+            {
+                type: "multiple-choice",
+                text: "Which of these is NOT typically part of a service offering?",
+                options: [
+                    "Goods",
+                    "Access to resources",
+                    "Service actions",
+                    "Organizational structure"
+                ],
+                correctAnswer: 3,
+                explanation: "A service offering may include goods, access to resources, and service actions, but not organizational structure."
+            },
+            {
+                type: "true-false",
+                text: "Service provision and service consumption are mutually exclusive activities.",
+                options: [
+                    "True",
+                    "False"
+                ],
+                correctAnswer: 1,
+                explanation: "False - Organizations typically both provide and consume services simultaneously."
+            },
+            {
+                type: "true-false",
+                text: "The roles of customer, user, and sponsor always refer to different people.",
+                options: [
+                    "True",
+                    "False"
+                ],
+                correctAnswer: 1,
+                explanation: "False - These roles can be separate or combined in the same person."
+            },
+            {
+                type: "multiple-choice",
+                text: "Which of the following is a key stakeholder in service relationships?",
+                options: [
+                    "Service providers only",
+                    "Service consumers only",
+                    "Both service providers and service consumers",
+                    "Neither service providers nor service consumers"
+                ],
+                correctAnswer: 2,
+                explanation: "Both service providers and service consumers are key stakeholders in service relationships, along with other stakeholders like employees, partners, and shareholders."
+            },
+            {
+                type: "multiple-choice",
+                text: "What is the primary purpose of service relationship management?",
+                options: [
+                    "To maximize profits for service providers",
+                    "To minimize costs for service consumers",
+                    "To ensure continual value co-creation",
+                    "To standardize service delivery processes"
+                ],
+                correctAnswer: 2,
+                explanation: "Service relationship management involves joint activities performed by a service provider and a service consumer to ensure continual value co-creation."
+            },
+            {
+                type: "scenario",
+                text: "Scenario: A hotel offers accommodation services. Guests receive a room (goods), access to facilities like pool and gym (resources), and daily housekeeping (service actions). What component of the service offering does 'daily housekeeping' represent?",
+                options: [
+                    "Goods",
+                    "Access to resources",
+                    "Service actions",
+                    "Utility"
+                ],
+                correctAnswer: 2,
+                explanation: "Daily housekeeping represents service actions, which are performed by the provider to address a consumer's needs."
+            },
+            {
+                type: "multiple-choice",
+                text: "How is value created between organizations according to ITIL 4?",
+                options: [
+                    "Through one-directional delivery of services",
+                    "Through collaborative service relationships",
+                    "Through competitive bidding processes",
+                    "Through standardized service catalogs"
+                ],
+                correctAnswer: 1,
+                explanation: "Value is created through collaborative service relationships where organizations work together to co-create value."
+            },
+            {
+                "id": 1,
+                "type": "multiple-choice",
+                "text": "What is the definition of 'service management' in ITIL 4?",
+                "options": [
+                    "A set of technical procedures for maintaining IT infrastructure",
+                    "A set of specialized organizational capabilities for enabling value to customers in the form of services",
+                    "A framework for managing service desk operations",
+                    "A methodology for reducing service costs"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Service management is defined as a set of specialized organizational capabilities for enabling value to customers in the form of services.",
+                "category": "Key Concepts",
+                "difficulty": "Easy"
+            },
+            {
+                "id": 2,
+                "type": "multiple-choice",
+                "text": "Which of the following best describes how value is created between organizations?",
+                "options": [
+                    "Through one-directional delivery of services",
+                    "Through collaborative service relationships",
+                    "Through competitive bidding processes",
+                    "Through standardized service catalogs"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Value is created through collaborative service relationships where organizations work together to co-create value.",
+                "category": "Service Relationships",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 3,
+                "type": "multiple-choice",
+                "text": "What is the primary role of a 'sponsor' in service consumption?",
+                "options": [
+                    "Define requirements for services",
+                    "Use the services",
+                    "Authorize the budget for service consumption",
+                    "Manage the service delivery"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Sponsors authorize the budget for service consumption.",
+                "category": "Stakeholder Roles",
+                "difficulty": "Easy"
+            },
+            {
+                "id": 4,
+                "type": "multiple-choice",
+                "text": "Which statement about organizations in ITIL 4 is CORRECT?",
+                "options": [
+                    "Organizations can only be legal entities",
+                    "Organizations typically both provide and consume services simultaneously",
+                    "Service relationships are always between external organizations",
+                    "Organizations must have at least 10 people to be considered an organization"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Organizations typically both provide and consume several services at any given time.",
+                "category": "Organizations",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 5,
+                "type": "true-false",
+                "text": "Service relationships are established between two or more organizations to co-create value.",
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "correctAnswer": 0,
+                "explanation": "True - Service relationships are established between two or more organizations to co-create value.",
+                "category": "Service Relationships",
+                "difficulty": "Easy"
+            },
+            {
+                "id": 6,
+                "type": "multiple-choice",
+                "text": "What does a service offering typically include?",
+                "options": [
+                    "Only goods and products",
+                    "Only service actions",
+                    "Goods, access to resources, and service actions",
+                    "Only access to resources"
+                ],
+                "correctAnswer": 2,
+                "explanation": "A service offering may include goods, access to resources, and service actions.",
+                "category": "Service Offerings",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 7,
+                "type": "multiple-choice",
+                "text": "Which of the following is NOT a key stakeholder in service relationships?",
+                "options": [
+                    "Service providers",
+                    "Service consumers",
+                    "Employees",
+                    "Weather patterns"
+                ],
+                "correctAnswer": 3,
+                "explanation": "Weather patterns are not stakeholders in service relationships. Key stakeholders include service providers, service consumers, employees, partners, suppliers, investors, and community groups.",
+                "category": "Stakeholders",
+                "difficulty": "Easy"
+            },
+            {
+                "id": 8,
+                "type": "scenario",
+                "text": "Scenario: A software company provides a cloud-based project management tool. The marketing team uses the tool for campaign planning, the IT director approved the purchase, and the project manager defined the feature requirements. Who is the customer in this scenario?",
+                "options": [
+                    "The marketing team members using the tool",
+                    "The IT director who approved the purchase",
+                    "The project manager who defined requirements",
+                    "The software company providing the tool"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The customer defines requirements for services and takes responsibility for outcomes. In this case, the project manager who defined the feature requirements is acting as the customer.",
+                "category": "Stakeholder Roles",
+                "difficulty": "Hard"
+            },
+            {
+                "id": 9,
+                "type": "multiple-choice",
+                "text": "What is the relationship between products and services?",
+                "options": [
+                    "Services are components of products",
+                    "Products and services are identical concepts",
+                    "Services are based on one or more products",
+                    "Products are delivered through service relationships"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Services are based on one or more of an organization's products.",
+                "category": "Products and Services",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 10,
+                "type": "true-false",
+                "text": "The roles of customer, user, and sponsor must always be filled by different people.",
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "correctAnswer": 1,
+                "explanation": "False - These roles can be separate or combined in the same person.",
+                "category": "Stakeholder Roles",
+                "difficulty": "Easy"
+            },
+            {
+                "id": 11,
+                "type": "multiple-choice",
+                "text": "Which of the following best describes 'value' from the perspective of different stakeholders?",
+                "options": [
+                    "Value is always financial and measurable in currency",
+                    "Value means the same thing to all stakeholders",
+                    "Different stakeholders may have different definitions of value",
+                    "Value is determined solely by the service provider"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Different stakeholders may have different, and sometimes conflicting, expectations from services and have different definitions of value.",
+                "category": "Value",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 12,
+                "type": "multiple-choice",
+                "text": "What is the key characteristic of products according to ITIL 4?",
+                "options": [
+                    "Products are always tangible items",
+                    "Products are fully visible to consumers",
+                    "Products are configurations of organizational resources",
+                    "Products are the same as services"
+                ],
+                "correctAnswer": 2,
+                "explanation": "A product is a configuration of an organization's resources designed to offer value for a consumer.",
+                "category": "Products and Services",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 13,
+                "type": "scenario",
+                "text": "Scenario: A company provides an online banking service. Customers can transfer funds (service action), access their account information (access to resources), and receive printed statements (goods). Which component represents 'access to resources'?",
+                "options": [
+                    "Transferring funds",
+                    "Accessing account information",
+                    "Receiving printed statements",
+                    "All of the above"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Accessing account information represents access to resources, where ownership is not transferred to the consumer but access is granted under agreed terms.",
+                "category": "Service Offerings",
+                "difficulty": "Hard"
+            },
+            {
+                "id": 14,
+                "type": "multiple-choice",
+                "text": "What is the primary purpose of service relationship management?",
+                "options": [
+                    "To maximize profits for service providers",
+                    "To minimize costs for service consumers",
+                    "To ensure continual value co-creation",
+                    "To standardize service delivery processes"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Service relationship management involves joint activities performed by a service provider and a service consumer to ensure continual value co-creation.",
+                "category": "Service Relationships",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 15,
+                "type": "multiple-choice",
+                "text": "Which of the following statements about service provision is CORRECT?",
+                "options": [
+                    "Service provision involves only the delivery of services",
+                    "Service provision is the responsibility of the service consumer",
+                    "Service provision includes managing provider resources and ensuring user access",
+                    "Service provision excludes service level management"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Service provision activities include management of the provider's resources configured to deliver the service, ensuring access to these resources for users, fulfillment of agreed service actions, and service level management.",
+                "category": "Service Provision",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 16,
+                "type": "true-false",
+                "text": "Service consumption involves only the act of using a service.",
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "correctAnswer": 1,
+                "explanation": "False - Service consumption includes management of the consumer's resources needed to use the service, service actions performed by users, and utilizing the provider's resources.",
+                "category": "Service Consumption",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 17,
+                "type": "multiple-choice",
+                "text": "What is essential for developing specialized organizational capabilities for service management?",
+                "options": [
+                    "Understanding only the technical aspects of services",
+                    "Understanding the nature of value and stakeholders",
+                    "Focusing only on cost reduction",
+                    "Implementing the latest technology trends"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Developing specialized organizational capabilities requires understanding the nature of value, the nature and scope of stakeholders involved, and how value creation is enabled through services.",
+                "category": "Service Management",
+                "difficulty": "Hard"
+            },
+            {
+                "id": 18,
+                "type": "multiple-choice",
+                "text": "How can organizations vary according to ITIL 4?",
+                "options": [
+                    "Only in size and revenue",
+                    "Only in their legal structure",
+                    "In size, complexity, and relation to legal entities",
+                    "Only in the number of employees"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Organizations vary in size and complexity, and in their relation to legal entities, from a single person or team to a complex network of legal entities.",
+                "category": "Organizations",
+                "difficulty": "Easy"
+            },
+            {
+                "id": 19,
+                "type": "scenario",
+                "text": "Scenario: A university provides online learning services. Students access course materials (resources), submit assignments (service actions), and receive digital certificates (goods). The department head defined the requirements, the dean approved the budget, and students use the platform daily. Who is the user?",
+                "options": [
+                    "The department head",
+                    "The dean",
+                    "The students",
+                    "The IT support team"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Users are the people who use the service. In this case, the students who use the online learning platform daily are the users.",
+                "category": "Stakeholder Roles",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 20,
+                "type": "multiple-choice",
+                "text": "What is a key benefit of identifying different service consumer roles?",
+                "options": [
+                    "To increase service costs",
+                    "To ensure effective communication and stakeholder management",
+                    "To complicate service delivery processes",
+                    "To limit service access"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Identifying consumer roles (customer, user, sponsor) in service relationships ensures effective communication and stakeholder management.",
+                "category": "Stakeholder Roles",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 21,
+                "type": "true-false",
+                "text": "Products are complex and not fully visible to the consumer.",
+                "options": [
+                    "True",
+                    "False"
+                ],
+                "correctAnswer": 0,
+                "explanation": "True - Products are complex and not fully visible to the consumer. Organizations define which product components consumers see.",
+                "category": "Products and Services",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 22,
+                "type": "multiple-choice",
+                "text": "Which of the following is an example of indirect value creation?",
+                "options": [
+                    "Revenue generation",
+                    "Cost savings",
+                    "Employee experience",
+                    "Service fees"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Employee experience is an example of indirect value creation, while revenue generation and service fees are direct value.",
+                "category": "Value",
+                "difficulty": "Hard"
+            },
+            {
+                "id": 23,
+                "type": "multiple-choice",
+                "text": "What do service providers and service consumers do in service relationships?",
+                "options": [
+                    "Compete with each other",
+                    "Work independently without interaction",
+                    "Cooperate to co-create value",
+                    "Focus only on their own objectives"
+                ],
+                "correctAnswer": 2,
+                "explanation": "Service providers and service consumers cooperate in service relationships to co-create value.",
+                "category": "Service Relationships",
+                "difficulty": "Easy"
+            },
+            {
+                "id": 24,
+                "type": "scenario",
+                "text": "Scenario: A car sharing service provides vehicles (goods), access to a mobile app for booking (access to resources), and 24/7 customer support (service actions). A customer uses the service for daily commuting, the operations manager defined the service requirements, and the finance department approved the budget. Which component represents 'goods'?",
+                "options": [
+                    "The mobile app access",
+                    "The 24/7 customer support",
+                    "The vehicles provided",
+                    "The booking process"
+                ],
+                "correctAnswer": 2,
+                "explanation": "The vehicles represent goods, where ownership is transferred to the consumer (temporarily) and the consumer takes responsibility for future use.",
+                "category": "Service Offerings",
+                "difficulty": "Medium"
+            },
+            {
+                "id": 25,
+                "type": "multiple-choice",
+                "text": "Why is it important to understand that organizations both provide and consume services?",
+                "options": [
+                    "To maximize service costs",
+                    "To recognize the interdependent nature of service relationships",
+                    "To limit service offerings",
+                    "To simplify organizational structure"
+                ],
+                "correctAnswer": 1,
+                "explanation": "Understanding that organizations both provide and consume services helps recognize the interdependent nature of service relationships and the importance of collaboration.",
+                "category": "Organizations",
+                "difficulty": "Hard"
+            }
+        ];
+
+        // Initialize exam
+        let currentQuestion = 0;
+        let userAnswers = new Array(questions.length).fill(null);
+        let score = 0;
+
+        // Track which questions have been checked
+        let checkedQuestions = new Array(questions.length).fill(false);
+
+        // DOM Elements
+        const questionsContainer = document.getElementById('questions-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const checkBtn = document.getElementById('check-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        const resultsContainer = document.getElementById('results-container');
+        const finalScore = document.getElementById('final-score');
+        const resultsMessage = document.getElementById('results-message');
+        const restartBtn = document.getElementById('restart-btn');
+
+        // Initialize exam
+        function initializeExam() {
+            questionsContainer.innerHTML = '';
+
+            questions.forEach((question, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.className = 'question-container';
+                questionElement.style.display = index === 0 ? 'block' : 'none';
+                questionElement.id = `question-${index}`;
+
+                questionElement.innerHTML = `
+                    <div class="question-header">
+                        <div class="question-number">Question ${index + 1} of ${questions.length}</div>
+                        <div class="question-type">${question.type.charAt(0).toUpperCase() + question.type.slice(1)}</div>
+                    </div>
+                    
+                    <div class="question-text">${question.text}</div>
+                    
+                    <div class="options" id="options-${index}">
+                        ${question.options.map((option, i) => `
+                            <div class="option" data-index="${i}">${String.fromCharCode(65 + i)}) ${option}</div>
+                        `).join('')}
+                    </div>
+                    
+                    <div class="answer-feedback" id="feedback-${index}"></div>
+                `;
+
+                questionsContainer.appendChild(questionElement);
+
+                // Add event listeners to options
+                const options = questionElement.querySelectorAll('.option');
+                options.forEach(option => {
+                    option.addEventListener('click', () => {
+                        selectOption(index, parseInt(option.getAttribute('data-index')));
+                    });
+                });
+            });
+
+            updateProgress();
+        }
+
+        // Select option
+        function selectOption(questionIndex, optionIndex) {
+            // Clear previous selection for this question
+            const options = document.querySelectorAll(`#question-${questionIndex} .option`);
+            options.forEach(option => option.classList.remove('selected'));
+
+            // Select new option
+            options[optionIndex].classList.add('selected');
+            userAnswers[questionIndex] = optionIndex;
+
+            // Enable check button
+            checkBtn.disabled = false;
+        }
+
+        // Check answer
+        function checkAnswer() {
+            if (userAnswers[currentQuestion] === null) {
+                alert('Please select an answer before checking.');
+                return;
+            }
+
+            const question = questions[currentQuestion];
+            const options = document.querySelectorAll(`#question-${currentQuestion} .option`);
+            const feedback = document.getElementById(`feedback-${currentQuestion}`);
+            const userAnswer = userAnswers[currentQuestion];
+
+            // Show correct/incorrect for all options
+            options.forEach((option, index) => {
+                option.classList.remove('correct', 'incorrect');
+                if (index === question.correctAnswer) {
+                    option.classList.add('correct');
+                }
+                if (index === userAnswer && index !== question.correctAnswer) {
+                    option.classList.add('incorrect');
+                }
+            });
+
+            // Show feedback
+            feedback.textContent = question.explanation;
+            feedback.className = 'answer-feedback';
+            feedback.classList.add(userAnswer === question.correctAnswer ? 'correct' : 'incorrect');
+            feedback.style.display = 'block';
+
+            // Update score only once per question
+            if (!checkedQuestions[currentQuestion]) {
+                if (userAnswer === question.correctAnswer) {
+                    score++;
+                }
+                checkedQuestions[currentQuestion] = true;
+            }
+
+            // Disable check button
+            checkBtn.disabled = true;
+
+            // If all questions have been answered, show results
+            if (checkedQuestions.every(Boolean)) {
+                showResults();
+            }
+        }
+
+        // Show question
+        function showQuestion(index) {
+            // Hide all questions
+            document.querySelectorAll('.question-container').forEach(q => {
+                q.style.display = 'none';
+            });
+
+            // Show selected question
+            document.getElementById(`question-${index}`).style.display = 'block';
+
+            // Update buttons
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === questions.length - 1;
+
+            // Enable/disable check button based on whether answer is selected
+            checkBtn.disabled = userAnswers[index] === null;
+
+            // Update progress
+            updateProgress();
+        }
+
+        // Update progress
+        function updateProgress() {
+            const progress = ((currentQuestion + 1) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            progressText.textContent = `${currentQuestion + 1}/${questions.length}`;
+        }
+
+        // Show results
+        function showResults() {
+            document.querySelector('.content').style.display = 'none';
+            document.querySelector('.progress-container').style.display = 'none';
+            resultsContainer.style.display = 'block';
+
+            const percentage = Math.round((score / questions.length) * 100);
+            finalScore.textContent = `${percentage}%`;
+
+            if (percentage >= 65) {
+                resultsMessage.textContent = 'Congratulations! You passed the ITIL 4 Foundation exam practice.';
+                resultsMessage.style.color = '#2ecc71';
+            } else {
+                resultsMessage.textContent = 'You did not pass this time. Review the material and try again.';
+                resultsMessage.style.color = '#e74c3c';
+            }
+        }
+
+        // Restart exam
+        function restartExam() {
+            currentQuestion = 0;
+            userAnswers = new Array(questions.length).fill(null);
+            score = 0;
+            checkedQuestions = new Array(questions.length).fill(false);
+
+            document.querySelector('.content').style.display = 'block';
+            document.querySelector('.progress-container').style.display = 'block';
+            resultsContainer.style.display = 'none';
+
+            initializeExam();
+            showQuestion(0);
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion(currentQuestion);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                showQuestion(currentQuestion);
+            } else {
+                showResults();
+            }
+        });
+
+        checkBtn.addEventListener('click', checkAnswer);
+        restartBtn.addEventListener('click', restartExam);
+
+        // Initialize exam
+        initializeExam();
+    </script>
+</body>
+
+</html>

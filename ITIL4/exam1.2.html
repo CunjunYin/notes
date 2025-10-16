@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITIL 4 Foundation – Key Concepts Practice</title>
+<style>
+ body{font-family:'Segoe UI',sans-serif;background:#0f172a;color:#e2e8f0;padding:30px;line-height:1.6}
+ h1{color:#38bdf8;text-align:center}
+ .question{background:#1e293b;padding:18px;border-radius:12px;margin:18px 0}
+ .qtext{font-weight:600;margin-bottom:10px}
+ label{display:block;margin:6px 0;padding:8px 10px;border-radius:6px;border:1px solid #334155;cursor:pointer}
+ label:hover{background:#273548}
+ .correct{background:rgba(16,185,129,0.15);border-color:#10b981}
+ .wrong{background:rgba(239,68,68,0.15);border-color:#ef4444}
+ button{background:#38bdf8;color:#0f172a;border:none;padding:6px 12px;border-radius:6px;font-weight:600;cursor:pointer;margin-top:8px}
+ .explanation{margin-top:10px;padding:10px;border-radius:8px;display:none}
+ .explanation.correct{background:rgba(16,185,129,0.1);border-left:3px solid #10b981}
+ .explanation.wrong{background:rgba(239,68,68,0.1);border-left:3px solid #ef4444}
+</style>
+</head>
+<body>
+<h1>ITIL 4 Foundation — Key Concepts of Service Management</h1>
+
+<div id="quiz">
+
+<!-- Question 1 -->
+<div class="question" data-correct="b" data-expl="A service enables value co-creation by helping customers achieve outcomes without managing specific costs and risks.">
+  <div class="qtext">1. Which statement best defines a <strong>service</strong>?</div>
+  <label><input type="radio" name="q1" value="a">A. A tangible product owned by the customer</label>
+  <label><input type="radio" name="q1" value="b">B. A means of enabling value co-creation by facilitating desired outcomes without the customer managing costs and risks</label>
+  <label><input type="radio" name="q1" value="c">C. A marketing promise made by the provider</label>
+  <label><input type="radio" name="q1" value="d">D. A process unrelated to customer outcomes</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 2 -->
+<div class="question" data-correct="c" data-expl="The customer defines the service requirements and desired outcomes; users use the service, sponsors fund it.">
+  <div class="qtext">2. Who is primarily responsible for defining <strong>requirements and outcomes</strong> of a service?</div>
+  <label><input type="radio" name="q2" value="a">A. User</label>
+  <label><input type="radio" name="q2" value="b">B. Sponsor</label>
+  <label><input type="radio" name="q2" value="c">C. Customer</label>
+  <label><input type="radio" name="q2" value="d">D. Supplier</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 3 -->
+<div class="question" data-correct="d" data-expl="A product is a configuration of resources designed to offer value for a consumer.">
+  <div class="qtext">3. In ITIL 4, a <strong>product</strong> is best described as:</div>
+  <label><input type="radio" name="q3" value="a">A. A physical good sold to the customer</label>
+  <label><input type="radio" name="q3" value="b">B. A record of service incidents</label>
+  <label><input type="radio" name="q3" value="c">C. A process for delivering outcomes</label>
+  <label><input type="radio" name="q3" value="d">D. A configuration of an organization’s resources designed to offer value for a consumer</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 4 -->
+<div class="question" data-correct="a" data-expl="The sponsor authorizes or funds the service budget.">
+  <div class="qtext">4. Which role authorizes the <strong>budget</strong> for service consumption?</div>
+  <label><input type="radio" name="q4" value="a">A. Sponsor</label>
+  <label><input type="radio" name="q4" value="b">B. User</label>
+  <label><input type="radio" name="q4" value="c">C. Supplier</label>
+  <label><input type="radio" name="q4" value="d">D. Customer</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 5 -->
+<div class="question" data-correct="c" data-expl="A service offering may include goods, access to resources, and service actions.">
+  <div class="qtext">5. A <strong>service offering</strong> may include which of the following?</div>
+  <label><input type="radio" name="q5" value="a">A. Goods and financial investments only</label>
+  <label><input type="radio" name="q5" value="b">B. Licenses, staff salaries, and risks</label>
+  <label><input type="radio" name="q5" value="c">C. Goods, access to resources, and service actions</label>
+  <label><input type="radio" name="q5" value="d">D. Marketing materials and supplier contracts</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 6 -->
+<div class="question" data-correct="b" data-expl="Value co-creation happens when provider and consumer collaborate through interactive relationships to achieve beneficial outcomes.">
+  <div class="qtext">6. Which of the following best describes <strong>value co-creation</strong>?</div>
+  <label><input type="radio" name="q6" value="a">A. Provider delivers value to passive consumers</label>
+  <label><input type="radio" name="q6" value="b">B. Provider and consumer collaborate to achieve beneficial outcomes</label>
+  <label><input type="radio" name="q6" value="c">C. Consumers outsource all risks to providers</label>
+  <label><input type="radio" name="q6" value="d">D. Value is created only by technology</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 7 -->
+<div class="question" data-correct="a" data-expl="In practice, one person can hold multiple roles such as both customer and user.">
+  <div class="qtext">7. Which statement about <strong>service consumer roles</strong> is CORRECT?</div>
+  <label><input type="radio" name="q7" value="a">A. A person can be both a user and a customer</label>
+  <label><input type="radio" name="q7" value="b">B. Roles must always be performed by different organizations</label>
+  <label><input type="radio" name="q7" value="c">C. Sponsors cannot also be users</label>
+  <label><input type="radio" name="q7" value="d">D. Users define the service budget</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 8 -->
+<div class="question" data-correct="d" data-expl="An organization is any person or group with defined functions, responsibilities, authorities, and relationships to achieve objectives.">
+  <div class="qtext">8. In ITIL 4, which option describes an <strong>organization</strong>?</div>
+  <label><input type="radio" name="q8" value="a">A. Only legal business entities with profit motives</label>
+  <label><input type="radio" name="q8" value="b">B. Government departments only</label>
+  <label><input type="radio" name="q8" value="c">C. Groups of external suppliers</label>
+  <label><input type="radio" name="q8" value="d">D. A person or group with functions, responsibilities, authorities, and relationships to achieve objectives</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 9 -->
+<div class="question" data-correct="c" data-expl="Investors, employees, partners, and communities are all stakeholders who benefit from value creation.">
+  <div class="qtext">9. Which of the following statements about <strong>other stakeholders</strong> is TRUE?</div>
+  <label><input type="radio" name="q9" value="a">A. Only customers and users are stakeholders</label>
+  <label><input type="radio" name="q9" value="b">B. Employees are not stakeholders</label>
+  <label><input type="radio" name="q9" value="c">C. Stakeholders such as investors, employees, suppliers, and communities can all gain from value creation</label>
+  <label><input type="radio" name="q9" value="d">D. Stakeholders only consume resources</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 10 -->
+<div class="question" data-correct="b" data-expl="Access to resources provides use of provider resources under agreed conditions, e.g., cloud-based software access.">
+  <div class="qtext">10. Which is an example of <strong>access to resources</strong> in a service offering?</div>
+  <label><input type="radio" name="q10" value="a">A. Purchasing a laptop outright</label>
+  <label><input type="radio" name="q10" value="b">B. Using cloud-based software via a subscription license</label>
+  <label><input type="radio" name="q10" value="c">C. Receiving a physical brochure</label>
+  <label><input type="radio" name="q10" value="d">D. Hiring a consultant for one meeting</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 11 -->
+<div class="question" data-correct="b" data-expl="A service provider is the organization that creates and delivers services to consumers.">
+  <div class="qtext">11. Which statement best describes a <strong>service provider</strong> in ITIL 4?</div>
+  <label><input type="radio" name="q11" value="a">A. A person who purchases a service</label>
+  <label><input type="radio" name="q11" value="b">B. An organization that creates and delivers services</label>
+  <label><input type="radio" name="q11" value="c">C. A government regulator ensuring compliance</label>
+  <label><input type="radio" name="q11" value="d">D. A department that consumes external services</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 12 -->
+<div class="question" data-correct="c" data-expl="A service consumer is any organization that receives one or more services from a provider.">
+  <div class="qtext">12. What is the role of a <strong>service consumer</strong> in a service relationship?</div>
+  <label><input type="radio" name="q12" value="a">A. To design and maintain service infrastructure</label>
+  <label><input type="radio" name="q12" value="b">B. To provide funding and infrastructure to providers</label>
+  <label><input type="radio" name="q12" value="c">C. To receive and use services provided by another organization</label>
+  <label><input type="radio" name="q12" value="d">D. To supervise supplier relationships</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 13 -->
+<div class="question" data-correct="a" data-expl="Service relationships involve cooperation between provider and consumer through provision, consumption, and relationship management.">
+  <div class="qtext">13. What are <strong>service relationships</strong> primarily focused on?</div>
+  <label><input type="radio" name="q13" value="a">A. Co-creation of value between provider and consumer</label>
+  <label><input type="radio" name="q13" value="b">B. Reducing employee workload</label>
+  <label><input type="radio" name="q13" value="c">C. Increasing product sales volume</label>
+  <label><input type="radio" name="q13" value="d">D. Eliminating supplier involvement</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 14 -->
+<div class="question" data-correct="d" data-expl="The three components of a service relationship are: service provision, service consumption, and service relationship management.">
+  <div class="qtext">14. Which of the following are components of a <strong>service relationship</strong>?</div>
+  <label><input type="radio" name="q14" value="a">A. Outcomes, risks, and costs</label>
+  <label><input type="radio" name="q14" value="b">B. Warranty, utility, and costs</label>
+  <label><input type="radio" name="q14" value="c">C. Sponsors, customers, and users</label>
+  <label><input type="radio" name="q14" value="d">D. Service provision, service consumption, and service relationship management</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 15 -->
+<div class="question" data-correct="c" data-expl="The customer defines service requirements, users use the service, and sponsors fund it.">
+  <div class="qtext">15. Which of the following correctly matches the <strong>service consumer roles</strong>?</div>
+  <label><input type="radio" name="q15" value="a">A. Customer uses the service; user funds the service</label>
+  <label><input type="radio" name="q15" value="b">B. Sponsor defines requirements; customer authorizes budget</label>
+  <label><input type="radio" name="q15" value="c">C. Customer defines requirements; user uses the service; sponsor authorizes budget</label>
+  <label><input type="radio" name="q15" value="d">D. Sponsor consumes the service; user funds it</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 16 -->
+<div class="question" data-correct="b" data-expl="A stakeholder is any person or organization with interest or involvement in value creation, such as partners, suppliers, and community groups.">
+  <div class="qtext">16. In ITIL 4, what is the definition of a <strong>stakeholder</strong>?</div>
+  <label><input type="radio" name="q16" value="a">A. Only users of a service</label>
+  <label><input type="radio" name="q16" value="b">B. Any person or organization with interest in value creation</label>
+  <label><input type="radio" name="q16" value="c">C. Only external suppliers</label>
+  <label><input type="radio" name="q16" value="d">D. Only the service provider’s shareholders</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 17 -->
+<div class="question" data-correct="a" data-expl="An outcome is the result for a stakeholder, enabled by one or more outputs.">
+  <div class="qtext">17. What is an <strong>outcome</strong> in the context of ITIL 4?</div>
+  <label><input type="radio" name="q17" value="a">A. The result for a stakeholder enabled by one or more outputs</label>
+  <label><input type="radio" name="q17" value="b">B. The tangible deliverable of an activity</label>
+  <label><input type="radio" name="q17" value="c">C. The cost of service consumption</label>
+  <label><input type="radio" name="q17" value="d">D. The perceived benefit of risk mitigation</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 18 -->
+<div class="question" data-correct="d" data-expl="Utility describes what the service does (fit for purpose), and warranty describes how the service performs (fit for use).">
+  <div class="qtext">18. Which statement correctly compares <strong>utility</strong> and <strong>warranty</strong>?</div>
+  <label><input type="radio" name="q18" value="a">A. Both refer to financial value of a service</label>
+  <label><input type="radio" name="q18" value="b">B. Utility refers to reliability, warranty to functionality</label>
+  <label><input type="radio" name="q18" value="c">C. Utility ensures service availability; warranty ensures purpose</label>
+  <label><input type="radio" name="q18" value="d">D. Utility is “fit for purpose”; warranty is “fit for use”</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 19 -->
+<div class="question" data-correct="c" data-expl="Costs removed are those handled by the provider, while costs imposed are those the consumer must bear.">
+  <div class="qtext">19. From a service consumer’s perspective, what are the two types of <strong>costs</strong>?</div>
+  <label><input type="radio" name="q19" value="a">A. Internal and external costs</label>
+  <label><input type="radio" name="q19" value="b">B. Direct and indirect costs</label>
+  <label><input type="radio" name="q19" value="c">C. Costs removed by the service and costs imposed by the service</label>
+  <label><input type="radio" name="q19" value="d">D. Provider and consumer costs</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<!-- Question 20 -->
+<div class="question" data-correct="b" data-expl="Risks removed are those managed by the provider; risks imposed are those the consumer still faces while using the service.">
+  <div class="qtext">20. Which two types of <strong>risk</strong> are relevant to service consumers?</div>
+  <label><input type="radio" name="q20" value="a">A. Internal and supplier risks</label>
+  <label><input type="radio" name="q20" value="b">B. Risks removed from and risks imposed on the consumer</label>
+  <label><input type="radio" name="q20" value="c">C. Strategic and operational risks</label>
+  <label><input type="radio" name="q20" value="d">D. Provider and stakeholder risks</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+</div>
+
+<script>
+function checkOne(btn){
+  const q=btn.parentElement;
+  const correct=q.dataset.correct;
+  const expl=q.dataset.expl;
+  const selected=q.querySelector('input[type=radio]:checked');
+  const labels=q.querySelectorAll('label');
+  labels.forEach(l=>l.classList.remove('correct','wrong'));
+  const exp=q.querySelector('.explanation');
+  exp.style.display='block';
+  if(!selected){
+    exp.className='explanation wrong';
+    exp.innerHTML='Please select an answer first.';
+    return;
+  }
+  const val=selected.value;
+  if(val===correct){
+    selected.parentElement.classList.add('correct');
+    exp.className='explanation correct';
+    exp.innerHTML='<strong>✅ Correct!</strong> '+expl;
+  } else {
+    selected.parentElement.classList.add('wrong');
+    exp.className='explanation wrong';
+    exp.innerHTML='<strong>❌ Incorrect.</strong> '+expl;
+  }
+}
+</script>
+</body>
+</html>

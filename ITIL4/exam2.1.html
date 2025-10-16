@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITIL 4 Foundation – Key Concepts Practice</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 30px;
+            line-height: 1.6
+        }
+
+        h1 {
+            color: #38bdf8;
+            text-align: center
+        }
+
+        .question {
+            background: #1e293b;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 18px 0
+        }
+
+        .qtext {
+            font-weight: 600;
+            margin-bottom: 10px
+        }
+
+        label {
+            display: block;
+            margin: 6px 0;
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            cursor: pointer
+        }
+
+        label:hover {
+            background: #273548
+        }
+
+        .correct {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: #10b981
+        }
+
+        .wrong {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: #ef4444
+        }
+
+        button {
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 8px
+        }
+
+        .explanation {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            display: none
+        }
+
+        .explanation.correct {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 3px solid #10b981
+        }
+
+        .explanation.wrong {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 3px solid #ef4444
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ITIL 4 Foundation — Key Concepts of Service Management</h1>
+
+    <div id="quiz">
+        <div class="question" data-correct="c"
+            data-expl="The four dimensions of service management are: organizations and people, information and technology, partners and suppliers, and value streams and processes (1.pdf, page 4).">
+            <div class="qtext">1. What are the four dimensions of service management in ITIL 4?</div>
+            <label><input type="radio" name="q1" value="a">A. People, Process, Technology, Governance</label>
+            <label><input type="radio" name="q1" value="b">B. Strategy, Design, Transition, Operation</label>
+            <label><input type="radio" name="q1" value="c">C. Organizations and people, Information and technology,
+                Partners and suppliers, Value streams and processes</label>
+            <label><input type="radio" name="q1" value="d">D. Customers, Providers, Users, Sponsors</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="The four dimensions do not have sharp boundaries and may overlap, and they interact in unpredictable ways depending on complexity and uncertainty (1.pdf, page 7).">
+            <div class="qtext">2. Which statement about the four dimensions of service management is correct?</div>
+            <label><input type="radio" name="q2" value="a">A. They are completely separate and independent</label>
+            <label><input type="radio" name="q2" value="b">B. They only apply to large organizations</label>
+            <label><input type="radio" name="q2" value="c">C. They are hierarchical with clear reporting lines</label>
+            <label><input type="radio" name="q2" value="d">D. They may overlap and interact unpredictably</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="Culture is defined as values shared by a group of people, including expectations of how people should behave, ideas, beliefs, and practices (1.pdf, page 10).">
+            <div class="qtext">3. How is organizational culture defined in ITIL 4?</div>
+            <label><input type="radio" name="q3" value="a">A. The formal organizational structure and reporting
+                lines</label>
+            <label><input type="radio" name="q3" value="b">B. Values shared by a group including expectations, beliefs,
+                and practices</label>
+            <label><input type="radio" name="q3" value="c">C. The technical capabilities of an organization</label>
+            <label><input type="radio" name="q3" value="d">D. The financial performance metrics of an
+                organization</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="A supportive culture requires shared values and attitudes, leaders that champion values, trust and transparency, and communication (1.pdf, page 11).">
+            <div class="qtext">4. What does a supportive organizational culture require?</div>
+            <label><input type="radio" name="q4" value="a">A. Shared values, leadership advocacy, trust, and
+                communication</label>
+            <label><input type="radio" name="q4" value="b">B. Strict hierarchical control and formal procedures</label>
+            <label><input type="radio" name="q4" value="c">C. Complete autonomy for all employees</label>
+            <label><input type="radio" name="q4" value="d">D. Focus only on technical excellence</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="The information and technology dimension considers what information is managed, what supporting information is needed, and how information assets will be protected and managed (1.pdf, page 15).">
+            <div class="qtext">5. What does the information and technology dimension consider?</div>
+            <label><input type="radio" name="q5" value="a">A. Only the hardware and software used by the
+                organization</label>
+            <label><input type="radio" name="q5" value="b">B. Only the IT department's organizational structure</label>
+            <label><input type="radio" name="q5" value="c">C. Information management, supporting knowledge, and
+                protection of assets</label>
+            <label><input type="radio" name="q5" value="d">D. Only the cost of technology investments</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="Information architecture needs to consider availability, reliability, accessibility, timeliness, accuracy, and relevance of information (1.pdf, page 16).">
+            <div class="qtext">6. What criteria should information architecture take into account?</div>
+            <label><input type="radio" name="q6" value="a">A. Only cost and budget constraints</label>
+            <label><input type="radio" name="q6" value="b">B. Only technical specifications</label>
+            <label><input type="radio" name="q6" value="c">C. Only user interface design</label>
+            <label><input type="radio" name="q6" value="d">D. Availability, reliability, accessibility, timeliness,
+                accuracy, and relevance</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="For many services, information management is the primary means of enabling customer value, and information is generally the key output of IT services (1.pdf, page 17).">
+            <div class="qtext">7. Why is information management important in service management?</div>
+            <label><input type="radio" name="q7" value="a">A. It reduces the need for human resources</label>
+            <label><input type="radio" name="q7" value="b">B. It is the primary means of enabling customer value</label>
+            <label><input type="radio" name="q7" value="c">C. It eliminates the need for service desks</label>
+            <label><input type="radio" name="q7" value="d">D. It focuses only on data storage</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="The partners and suppliers dimension encompasses relationships with other organizations involved in design, development, deployment, delivery, support, and continual improvement of services (1.pdf, page 22).">
+            <div class="qtext">8. What does the partners and suppliers dimension encompass?</div>
+            <label><input type="radio" name="q8" value="a">A. Only contractual agreements with vendors</label>
+            <label><input type="radio" name="q8" value="b">B. Only financial transactions with suppliers</label>
+            <label><input type="radio" name="q8" value="c">C. Relationships with organizations involved in service
+                lifecycle activities</label>
+            <label><input type="radio" name="q8" value="d">D. Only the procurement department's activities</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="Relationships range from formal contracts with clear separation of responsibilities to flexible partnerships with shared goals and risks (1.pdf, page 25).">
+            <div class="qtext">9. How do relationships with partners and suppliers vary?</div>
+            <label><input type="radio" name="q9" value="a">A. From formal contracts to flexible partnerships with shared
+                goals</label>
+            <label><input type="radio" name="q9" value="b">B. They are always formal and contractual</label>
+            <label><input type="radio" name="q9" value="c">C. They are always informal and flexible</label>
+            <label><input type="radio" name="q9" value="d">D. They are determined solely by cost considerations</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="Service Integration and Management (SIAM) involves using a specially established integrator to ensure service relationships are properly coordinated (1.pdf, page 26).">
+            <div class="qtext">10. What is Service Integration and Management (SIAM)?</div>
+            <label><input type="radio" name="q10" value="a">A. A method for reducing supplier costs</label>
+            <label><input type="radio" name="q10" value="b">B. Using an integrator to coordinate service
+                relationships</label>
+            <label><input type="radio" name="q10" value="c">C. A software tool for managing suppliers</label>
+            <label><input type="radio" name="q10" value="d">D. A legal framework for contracts</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="A value stream is a series of steps that an organization undertakes to create and deliver products and services to consumers (1.pdf, page 28).">
+            <div class="qtext">11. What is a value stream?</div>
+            <label><input type="radio" name="q11" value="a">A. The financial value of services delivered</label>
+            <label><input type="radio" name="q11" value="b">B. The strategic objectives of an organization</label>
+            <label><input type="radio" name="q11" value="c">C. A series of steps to create and deliver products and
+                services</label>
+            <label><input type="radio" name="q11" value="d">D. The customer satisfaction measurement process</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="Value streams include both value-adding activities and non-value-adding activities (waste) (1.pdf, page 28).">
+            <div class="qtext">12. What do value streams include?</div>
+            <label><input type="radio" name="q12" value="a">A. Only activities that generate revenue</label>
+            <label><input type="radio" name="q12" value="b">B. Only customer-facing activities</label>
+            <label><input type="radio" name="q12" value="c">C. Only strategic planning activities</label>
+            <label><input type="radio" name="q12" value="d">D. Both value-adding and non-value-adding activities</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="A process is a set of interrelated or interacting activities and defined sequence of actions that transforms inputs into outputs (1.pdf, page 31).">
+            <div class="qtext">13. How is a process defined in ITIL 4?</div>
+            <label><input type="radio" name="q13" value="a">A. A set of interrelated activities that transforms inputs
+                into outputs</label>
+            <label><input type="radio" name="q13" value="b">B. The organizational structure for service delivery</label>
+            <label><input type="radio" name="q13" value="c">C. The financial flow of service transactions</label>
+            <label><input type="radio" name="q13" value="d">D. The technology infrastructure supporting services</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="PESTLE is an acronym for Political, Economic, Social, Technological, Legal, and Environmental factors that influence service providers (1.pdf, page 36).">
+            <div class="qtext">14. What does PESTLE stand for in the context of external factors?</div>
+            <label><input type="radio" name="q14" value="a">A. Process, Efficiency, System, Technology, Logistics,
+                Environment</label>
+            <label><input type="radio" name="q14" value="b">B. Political, Economic, Social, Technological, Legal,
+                Environmental</label>
+            <label><input type="radio" name="q14" value="c">C. Planning, Execution, Strategy, Tactics, Leadership,
+                Evaluation</label>
+            <label><input type="radio" name="q14" value="d">D. People, Equipment, Systems, Technology, Logistics,
+                Economics</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="The ITIL Service Value System (SVS) describes how all components and activities of the organization unite as a system to enable value creation (2.pdf, page 4).">
+            <div class="qtext">15. What is the purpose of the ITIL Service Value System (SVS)?</div>
+            <label><input type="radio" name="q15" value="a">A. To manage IT infrastructure components</label>
+            <label><input type="radio" name="q15" value="b">B. To create financial budgets for IT services</label>
+            <label><input type="radio" name="q15" value="c">C. To enable value creation through unified components and
+                activities</label>
+            <label><input type="radio" name="q15" value="d">D. To replace all existing IT management frameworks</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="The key inputs to the SVS are opportunity and demand, and the outcome is value (2.pdf, page 6).">
+            <div class="qtext">16. What are the key inputs and outcome of the SVS?</div>
+            <label><input type="radio" name="q16" value="a">A. Inputs: Resources and capabilities; Outcome:
+                Profit</label>
+            <label><input type="radio" name="q16" value="b">B. Inputs: Technology and people; Outcome: Services</label>
+            <label><input type="radio" name="q16" value="c">C. Inputs: Policies and procedures; Outcome:
+                Compliance</label>
+            <label><input type="radio" name="q16" value="d">D. Inputs: Opportunity and demand; Outcome: Value</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="Governance is the means by which an organization is directed and controlled through evaluating, directing, and monitoring (2.pdf, page 7).">
+            <div class="qtext">17. What is governance in the context of the SVS?</div>
+            <label><input type="radio" name="q17" value="a">A. The means by which an organization is directed and
+                controlled</label>
+            <label><input type="radio" name="q17" value="b">B. The financial management of IT services</label>
+            <label><input type="radio" name="q17" value="c">C. The technical oversight of IT infrastructure</label>
+            <label><input type="radio" name="q17" value="d">D. The legal compliance framework for IT</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="Continual improvement is a recurring organizational activity performed at all levels to ensure performance meets stakeholders' expectations (2.pdf, page 5).">
+            <div class="qtext">18. What is continual improvement in the SVS?</div>
+            <label><input type="radio" name="q18" value="a">A. A one-time project to improve services</label>
+            <label><input type="radio" name="q18" value="b">B. A recurring activity at all levels to meet stakeholder
+                expectations</label>
+            <label><input type="radio" name="q18" value="c">C. A technical upgrade of IT systems</label>
+            <label><input type="radio" name="q18" value="d">D. A financial audit process</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="Organizational silos are one of the biggest challenges when trying to work effectively with a shared vision or become more agile and resilient (2.pdf, page 8).">
+            <div class="qtext">19. What is identified as one of the biggest challenges to effective organizational work?
+            </div>
+            <label><input type="radio" name="q19" value="a">A. Lack of technology</label>
+            <label><input type="radio" name="q19" value="b">B. Insufficient funding</label>
+            <label><input type="radio" name="q19" value="c">C. Organizational silos</label>
+            <label><input type="radio" name="q19" value="d">D. Customer complaints</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="The service value chain is a generic operating model that can follow different patterns of activity called value streams (3.pdf, page 29).">
+            <div class="qtext">20. What is the service value chain?</div>
+            <label><input type="radio" name="q20" value="a">A. The financial value of services delivered</label>
+            <label><input type="radio" name="q20" value="b">B. The sequence of customer interactions</label>
+            <label><input type="radio" name="q20" value="c">C. The technology infrastructure supporting services</label>
+            <label><input type="radio" name="q20" value="d">D. A generic operating model with activity patterns called
+                value streams</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="The six value chain activities are: plan, improve, engage, design and transition, obtain/build, and deliver and support (3.pdf, page 21).">
+            <div class="qtext">21. What are the six value chain activities?</div>
+            <label><input type="radio" name="q21" value="a">A. Plan, Improve, Engage, Design & transition, Obtain/build,
+                Deliver & support</label>
+            <label><input type="radio" name="q21" value="b">B. Strategy, Design, Transition, Operation, Improvement,
+                Retirement</label>
+            <label><input type="radio" name="q21" value="c">C. Request, Fulfill, Deliver, Support, Improve,
+                Retire</label>
+            <label><input type="radio" name="q21" value="d">D. Plan, Build, Run, Monitor, Improve, Report</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="The purpose of the plan value chain activity is to ensure a shared understanding of the vision, current status, and improvement direction (3.pdf, page 9).">
+            <div class="qtext">22. What is the purpose of the plan value chain activity?</div>
+            <label><input type="radio" name="q22" value="a">A. To create detailed project plans</label>
+            <label><input type="radio" name="q22" value="b">B. To ensure shared understanding of vision and improvement
+                direction</label>
+            <label><input type="radio" name="q22" value="c">C. To schedule staff shifts</label>
+            <label><input type="radio" name="q22" value="d">D. To manage financial budgets</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="The purpose of the improve value chain activity is to ensure continual improvement of products, services, and practices across all value chain activities (3.pdf, page 11).">
+            <div class="qtext">23. What is the purpose of the improve value chain activity?</div>
+            <label><input type="radio" name="q23" value="a">A. To improve only IT infrastructure</label>
+            <label><input type="radio" name="q23" value="b">B. To conduct annual performance reviews</label>
+            <label><input type="radio" name="q23" value="c">C. To ensure continual improvement across all value chain
+                activities</label>
+            <label><input type="radio" name="q23" value="d">D. To upgrade software applications</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="The purpose of the engage value chain activity is to provide understanding of stakeholder needs, transparency, and continual engagement (3.pdf, page 13).">
+            <div class="qtext">24. What is the purpose of the engage value chain activity?</div>
+            <label><input type="radio" name="q24" value="a">A. To engage only with customers</label>
+            <label><input type="radio" name="q24" value="b">B. To manage social media presence</label>
+            <label><input type="radio" name="q24" value="c">C. To conduct marketing campaigns</label>
+            <label><input type="radio" name="q24" value="d">D. To understand stakeholder needs and maintain
+                relationships</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="The purpose of the design and transition value chain activity is to ensure products and services continually meet stakeholder expectations for quality, costs, and time to market (3.pdf, page 15).">
+            <div class="qtext">25. What is the purpose of the design and transition value chain activity?</div>
+            <label><input type="radio" name="q25" value="a">A. To ensure products meet stakeholder expectations for
+                quality, cost, and time</label>
+            <label><input type="radio" name="q25" value="b">B. To design only the technical architecture</label>
+            <label><input type="radio" name="q25" value="c">C. To transition staff to new roles</label>
+            <label><input type="radio" name="q25" value="d">D. To create marketing materials for new services</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="The purpose of the obtain/build value chain activity is to ensure service components are available when and where needed and meet agreed specifications (3.pdf, page 17).">
+            <div class="qtext">26. What is the purpose of the obtain/build value chain activity?</div>
+            <label><input type="radio" name="q26" value="a">A. To obtain funding for projects</label>
+            <label><input type="radio" name="q26" value="b">B. To ensure service components are available and meet
+                specifications</label>
+            <label><input type="radio" name="q26" value="c">C. To build physical facilities</label>
+            <label><input type="radio" name="q26" value="d">D. To obtain legal permits</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="The purpose of the deliver and support value chain activity is to ensure services are delivered and supported according to agreed specifications and stakeholder expectations (3.pdf, page 19).">
+            <div class="qtext">27. What is the purpose of the deliver and support value chain activity?</div>
+            <label><input type="radio" name="q27" value="a">A. To deliver packages to customers</label>
+            <label><input type="radio" name="q27" value="b">B. To support only IT systems</label>
+            <label><input type="radio" name="q27" value="c">C. To ensure services are delivered and supported as
+                agreed</label>
+            <label><input type="radio" name="q27" value="d">D. To manage delivery personnel</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="The engage activity might utilize supplier management, service desk management, relationship management, and service request management (3.pdf, page 6).">
+            <div class="qtext">28. Which practices might the engage value chain activity utilize?</div>
+            <label><input type="radio" name="q28" value="a">A. Software development and testing</label>
+            <label><input type="radio" name="q28" value="b">B. Infrastructure management</label>
+            <label><input type="radio" name="q28" value="c">C. Financial budgeting</label>
+            <label><input type="radio" name="q28" value="d">D. Supplier management and service desk management</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="Examples of value streams include: developing a new application, changing an existing application, fixing errors, and experimenting with applications (3.pdf, page 8).">
+            <div class="qtext">29. What are examples of value streams?</div>
+            <label><input type="radio" name="q29" value="a">A. Developing new applications and fixing errors in existing
+                ones</label>
+            <label><input type="radio" name="q29" value="b">B. Only financial approval processes</label>
+            <label><input type="radio" name="q29" value="c">C. Only customer complaint handling</label>
+            <label><input type="radio" name="q29" value="d">D. Only strategic planning sessions</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="The plan activity receives inputs including policies from the governing body, demands from engage, and performance information from improve (3.pdf, page 10).">
+            <div class="qtext">30. What are key inputs to the plan value chain activity?</div>
+            <label><input type="radio" name="q30" value="a">A. Only financial budgets</label>
+            <label><input type="radio" name="q30" value="b">B. Policies, demands, opportunities, and performance
+                information</label>
+            <label><input type="radio" name="q30" value="c">C. Only customer complaints</label>
+            <label><input type="radio" name="q30" value="d">D. Only technical specifications</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="The improve activity receives inputs including performance information, stakeholder feedback, and improvement opportunities (3.pdf, page 12).">
+            <div class="qtext">31. What are key inputs to the improve value chain activity?</div>
+            <label><input type="radio" name="q31" value="a">A. Only financial data</label>
+            <label><input type="radio" name="q31" value="b">B. Only customer satisfaction surveys</label>
+            <label><input type="radio" name="q31" value="c">C. Performance information, stakeholder feedback, and
+                improvement opportunities</label>
+            <label><input type="radio" name="q31" value="d">D. Only technology upgrade requests</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="The engage activity receives inputs including product portfolio from plan, requirements from customers, and incidents from users (3.pdf, page 14).">
+            <div class="qtext">32. What are key inputs to the engage value chain activity?</div>
+            <label><input type="radio" name="q32" value="a">A. Only marketing materials</label>
+            <label><input type="radio" name="q32" value="b">B. Only sales reports</label>
+            <label><input type="radio" name="q32" value="c">C. Only social media feedback</label>
+            <label><input type="radio" name="q32" value="d">D. Product portfolio, customer requirements, and user
+                incidents</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="The design and transition activity receives inputs including portfolio decisions from plan and product requirements from engage (3.pdf, page 16).">
+            <div class="qtext">33. What are key inputs to the design and transition value chain activity?</div>
+            <label><input type="radio" name="q33" value="a">A. Portfolio decisions, product requirements, and
+                improvement initiatives</label>
+            <label><input type="radio" name="q33" value="b">B. Only architectural drawings</label>
+            <label><input type="radio" name="q33" value="c">C. Only technology specifications</label>
+            <label><input type="radio" name="q33" value="d">D. Only user interface designs</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="The obtain/build activity receives inputs including contracts from engage, requirements from design and transition, and change requests from deliver and support (3.pdf, page 18).">
+            <div class="qtext">34. What are key inputs to the obtain/build value chain activity?</div>
+            <label><input type="radio" name="q34" value="a">A. Only purchase orders</label>
+            <label><input type="radio" name="q34" value="b">B. Contracts, requirements, and change requests</label>
+            <label><input type="radio" name="q34" value="c">C. Only building materials</label>
+            <label><input type="radio" name="q34" value="d">D. Only software licenses</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="The deliver and support activity receives inputs including new products from design and transition, service components from obtain/build, and user support tasks from engage (3.pdf, page 20).">
+            <div class="qtext">35. What are key inputs to the deliver and support value chain activity?</div>
+            <label><input type="radio" name="q35" value="a">A. Only delivery schedules</label>
+            <label><input type="radio" name="q35" value="b">B. Only support tickets</label>
+            <label><input type="radio" name="q35" value="c">C. New products, service components, and user support
+                tasks</label>
+            <label><input type="radio" name="q35" value="d">D. Only customer feedback</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="Failing to address all four dimensions properly may result in services becoming undeliverable or not meeting expectations (1.pdf, page 7).">
+            <div class="qtext">36. What may happen if an organization fails to address all four dimensions properly?
+            </div>
+            <label><input type="radio" name="q36" value="a">A. Increased profitability</label>
+            <label><input type="radio" name="q36" value="b">B. Faster service delivery</label>
+            <label><input type="radio" name="q36" value="c">C. Reduced costs</label>
+            <label><input type="radio" name="q36" value="d">D. Services may become undeliverable or not meet
+                expectations</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="Structures and systems of authority alone are insufficient to improve organizational effectiveness; a supportive culture is needed (1.pdf, page 10).">
+            <div class="qtext">37. Why is organizational culture important?</div>
+            <label><input type="radio" name="q37" value="a">A. Structures and authority alone are insufficient without
+                supportive culture</label>
+            <label><input type="radio" name="q37" value="b">B. Culture is only important for employee
+                satisfaction</label>
+            <label><input type="radio" name="q37" value="c">C. Culture affects only customer-facing staff</label>
+            <label><input type="radio" name="q37" value="d">D. Culture is separate from business objectives</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="Information is generally the key output of IT services which are consumed by business customers (1.pdf, page 17).">
+            <div class="qtext">38. What is generally the key output of IT services?</div>
+            <label><input type="radio" name="q38" value="a">A. Hardware devices</label>
+            <label><input type="radio" name="q38" value="b">B. Information</label>
+            <label><input type="radio" name="q38" value="c">C. Software applications</label>
+            <label><input type="radio" name="q38" value="d">D. Financial reports</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="Security and regulatory compliance are significant challenges for information management (1.pdf, page 18).">
+            <div class="qtext">39. What are significant challenges for information management?</div>
+            <label><input type="radio" name="q39" value="a">A. Only cost management</label>
+            <label><input type="radio" name="q39" value="b">B. Only technology upgrades</label>
+            <label><input type="radio" name="q39" value="c">C. Security and regulatory compliance</label>
+            <label><input type="radio" name="q39" value="d">D. Only data storage capacity</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="Services may use innovative technologies like blockchain, AI, and cognitive computing to gain competitive advantage (1.pdf, page 19).">
+            <div class="qtext">40. How can services use technology to gain competitive advantage?</div>
+            <label><input type="radio" name="q40" value="a">A. By using only standardized technologies</label>
+            <label><input type="radio" name="q40" value="b">B. By avoiding new technologies</label>
+            <label><input type="radio" name="q40" value="c">C. By focusing only on cost reduction</label>
+            <label><input type="radio" name="q40" value="d">D. By using innovative technologies like blockchain and
+                AI</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="Every organization and every service depend to some extent on products and services provided by other organizations (1.pdf, page 20).">
+            <div class="qtext">41. Why is the partners and suppliers dimension important?</div>
+            <label><input type="radio" name="q41" value="a">A. Every organization depends on other organizations for
+                some products/services</label>
+            <label><input type="radio" name="q41" value="b">B. It's only important for manufacturing
+                organizations</label>
+            <label><input type="radio" name="q41" value="c">C. It only affects the procurement department</label>
+            <label><input type="radio" name="q41" value="d">D. It's only relevant for international businesses</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="Forms of cooperation include goods supply, service delivery, and service partnership (1.pdf, page 23).">
+            <div class="qtext">42. What are the forms of cooperation between organizations?</div>
+            <label><input type="radio" name="q42" value="a">A. Only buying and selling</label>
+            <label><input type="radio" name="q42" value="b">B. Goods supply, service delivery, and service
+                partnership</label>
+            <label><input type="radio" name="q42" value="c">C. Only formal contracts</label>
+            <label><input type="radio" name="q42" value="d">D. Only informal agreements</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="Value streams can be thought of as visualizations of journeys through service value chain activities for specific scenarios or demand types (1.pdf, page 33).">
+            <div class="qtext">43. How can value streams be conceptualized?</div>
+            <label><input type="radio" name="q43" value="a">A. As financial flows</label>
+            <label><input type="radio" name="q43" value="b">B. As organizational charts</label>
+            <label><input type="radio" name="q43" value="c">C. As visualizations of journeys through service value chain
+                activities</label>
+            <label><input type="radio" name="q43" value="d">D. As technology architecture diagrams</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="External factors influence how organizations configure their resources and address the four dimensions of service management (1.pdf, page 36).">
+            <div class="qtext">44. How do external factors affect service providers?</div>
+            <label><input type="radio" name="q44" value="a">A. They only affect marketing strategies</label>
+            <label><input type="radio" name="q44" value="b">B. They only influence financial planning</label>
+            <label><input type="radio" name="q44" value="c">C. They are irrelevant to service management</label>
+            <label><input type="radio" name="q44" value="d">D. They influence how organizations configure resources and
+                address the four dimensions</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="The SVS interfaces with other organizations, forming an ecosystem that facilitates value for multiple stakeholders (2.pdf, page 4).">
+            <div class="qtext">45. How does the SVS relate to other organizations?</div>
+            <label><input type="radio" name="q45" value="a">A. It interfaces with other organizations, forming a value
+                ecosystem</label>
+            <label><input type="radio" name="q45" value="b">B. It operates independently from other
+                organizations</label>
+            <label><input type="radio" name="q45" value="c">C. It only interacts with customers</label>
+            <label><input type="radio" name="q45" value="d">D. It replaces other organizations' systems</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="The governing body evaluates the current state, directs by establishing policies, and monitors performance and compliance (2.pdf, page 7).">
+            <div class="qtext">46. What are the key governance activities?</div>
+            <label><input type="radio" name="q46" value="a">A. Only financial auditing</label>
+            <label><input type="radio" name="q46" value="b">B. Evaluating, directing, and monitoring</label>
+            <label><input type="radio" name="q46" value="c">C. Only strategic planning</label>
+            <label><input type="radio" name="q46" value="d">D. Only compliance reporting</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="c"
+            data-expl="The service value chain provides the operating model for service creation, delivery, and continual improvement (3.pdf, page 4).">
+            <div class="qtext">47. What role does the service value chain play in the SVS?</div>
+            <label><input type="radio" name="q47" value="a">A. It is only for strategic planning</label>
+            <label><input type="radio" name="q47" value="b">B. It manages only IT infrastructure</label>
+            <label><input type="radio" name="q47" value="c">C. It provides the operating model for service creation and
+                delivery</label>
+            <label><input type="radio" name="q47" value="d">D. It is only for financial management</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="d"
+            data-expl="The value streams and processes dimension defines activities, workflows, controls, and procedures needed to achieve objectives (1.pdf, page 27).">
+            <div class="qtext">48. What does the value streams and processes dimension define?</div>
+            <label><input type="radio" name="q48" value="a">A. Only organizational structure</label>
+            <label><input type="radio" name="q48" value="b">B. Only technology requirements</label>
+            <label><input type="radio" name="q48" value="c">C. Only supplier contracts</label>
+            <label><input type="radio" name="q48" value="d">D. Activities, workflows, controls, and procedures to
+                achieve objectives</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="a"
+            data-expl="The four dimensions are critical to the effective and efficient facilitation of value for customers and stakeholders (1.pdf, page 4).">
+            <div class="qtext">49. Why are the four dimensions important for service management?</div>
+            <label><input type="radio" name="q49" value="a">A. They are critical for effective and efficient value
+                facilitation</label>
+            <label><input type="radio" name="q49" value="b">B. They are only important for large organizations</label>
+            <label><input type="radio" name="q49" value="c">C. They only affect the IT department</label>
+            <label><input type="radio" name="q49" value="d">D. They are optional for service management</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+
+        <div class="question" data-correct="b"
+            data-expl="A useful way to think about value streams is as visualizations of journeys through service value chain activities for specific scenarios or demand types (1.pdf, page 33).">
+            <div class="qtext">50. How can organizations best understand and optimize their value streams?</div>
+            <label><input type="radio" name="q50" value="a">A. By focusing only on cost reduction</label>
+            <label><input type="radio" name="q50" value="b">B. By visualizing journeys through service value chain
+                activities</label>
+            <label><input type="radio" name="q50" value="c">C. By eliminating all non-value-adding activities
+                immediately</label>
+            <label><input type="radio" name="q50" value="d">D. By standardizing all processes regardless of
+                context</label>
+            <button onclick="checkOne(this)">Check Answer</button>
+            <div class="explanation"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkOne(btn) {
+            const q = btn.parentElement;
+            const correct = q.dataset.correct;
+            const expl = q.dataset.expl;
+            const selected = q.querySelector('input[type=radio]:checked');
+            const labels = q.querySelectorAll('label');
+            labels.forEach(l => l.classList.remove('correct', 'wrong'));
+            const exp = q.querySelector('.explanation');
+            exp.style.display = 'block';
+            if (!selected) {
+                exp.className = 'explanation wrong';
+                exp.innerHTML = 'Please select an answer first.';
+                return;
+            }
+            const val = selected.value;
+            if (val === correct) {
+                selected.parentElement.classList.add('correct');
+                exp.className = 'explanation correct';
+                exp.innerHTML = '<strong>✅ Correct!</strong> ' + expl;
+            } else {
+                selected.parentElement.classList.add('wrong');
+                exp.className = 'explanation wrong';
+                exp.innerHTML = '<strong>❌ Incorrect.</strong> ' + expl;
+            }
+        }
+    </script>
+</body>
+
+</html>

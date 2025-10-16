@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITIL 4 Foundation – Key Concepts Practice</title>
+<style>
+ body{font-family:'Segoe UI',sans-serif;background:#0f172a;color:#e2e8f0;padding:30px;line-height:1.6}
+ h1{color:#38bdf8;text-align:center}
+ .question{background:#1e293b;padding:18px;border-radius:12px;margin:18px 0}
+ .qtext{font-weight:600;margin-bottom:10px}
+ label{display:block;margin:6px 0;padding:8px 10px;border-radius:6px;border:1px solid #334155;cursor:pointer}
+ label:hover{background:#273548}
+ .correct{background:rgba(16,185,129,0.15);border-color:#10b981}
+ .wrong{background:rgba(239,68,68,0.15);border-color:#ef4444}
+ button{background:#38bdf8;color:#0f172a;border:none;padding:6px 12px;border-radius:6px;font-weight:600;cursor:pointer;margin-top:8px}
+ .explanation{margin-top:10px;padding:10px;border-radius:8px;display:none}
+ .explanation.correct{background:rgba(16,185,129,0.1);border-left:3px solid #10b981}
+ .explanation.wrong{background:rgba(239,68,68,0.1);border-left:3px solid #ef4444}
+</style>
+</head>
+<body>
+<h1>ITIL 4 Foundation — Key Concepts of Service Management</h1>
+
+<div id="quiz">
+<div class="question" data-correct="c" data-expl="A management practice is a set of organizational resources designed for performing work or accomplishing an objective (1.pdf, page 5).">
+  <div class="qtext">1. What is the definition of a management practice in ITIL 4?</div>
+  <label><input type="radio" name="q1" value="a">A. A documented procedure for handling incidents</label>
+  <label><input type="radio" name="q1" value="b">B. A technical specification for service components</label>
+  <label><input type="radio" name="q1" value="c">C. A set of organizational resources designed for performing work</label>
+  <label><input type="radio" name="q1" value="d">D. A financial model for service costing</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="ITIL 4 groups practices into three categories: general management practices, service management practices, and technical management practices (1.pdf, page 7).">
+  <div class="qtext">2. How does ITIL 4 group management practices?</div>
+  <label><input type="radio" name="q2" value="a">A. Strategic, tactical, and operational practices</label>
+  <label><input type="radio" name="q2" value="b">B. Customer-facing and internal practices</label>
+  <label><input type="radio" name="q2" value="c">C. Technical and business practices</label>
+  <label><input type="radio" name="q2" value="d">D. General management, service management, and technical management practices</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="The purpose of information security management is to protect the information needed by the organization to conduct its business (2.pdf, page 5).">
+  <div class="qtext">3. What is the purpose of information security management?</div>
+  <label><input type="radio" name="q3" value="a">A. To manage user access to IT systems</label>
+  <label><input type="radio" name="q3" value="b">B. To protect the information needed by the organization to conduct its business</label>
+  <label><input type="radio" name="q3" value="c">C. To ensure compliance with data protection laws</label>
+  <label><input type="radio" name="q3" value="d">D. To manage security incidents</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Information security management includes understanding and managing risks to the confidentiality, integrity, and availability of information (2.pdf, page 5).">
+  <div class="qtext">4. What aspects of information does information security management protect?</div>
+  <label><input type="radio" name="q4" value="a">A. Storage, backup, and recovery</label>
+  <label><input type="radio" name="q4" value="b">B. Creation, modification, and deletion</label>
+  <label><input type="radio" name="q4" value="c">C. Confidentiality, integrity, and availability</label>
+  <label><input type="radio" name="q4" value="d">D. Access, usage, and sharing</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Information security management maintains balance between prevention, detection, and correction (2.pdf, page 6).">
+  <div class="qtext">5. What balance does information security management maintain?</div>
+  <label><input type="radio" name="q5" value="a">A. Prevention, detection, and correction</label>
+  <label><input type="radio" name="q5" value="b">B. Cost, risk, and value</label>
+  <label><input type="radio" name="q5" value="c">C. People, process, and technology</label>
+  <label><input type="radio" name="q5" value="d">D. Planning, implementation, and review</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="The purpose of relationship management is to establish and nurture links between the organization and its stakeholders at strategic and tactical levels (2.pdf, page 8).">
+  <div class="qtext">6. What is the purpose of relationship management?</div>
+  <label><input type="radio" name="q6" value="a">A. To manage customer complaints</label>
+  <label><input type="radio" name="q6" value="b">B. To negotiate service level agreements</label>
+  <label><input type="radio" name="q6" value="c">C. To coordinate between IT teams</label>
+  <label><input type="radio" name="q6" value="d">D. To establish and nurture links with stakeholders</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Relationship management includes identification, analysis, monitoring, and continual improvement of relationships with stakeholders (2.pdf, page 8).">
+  <div class="qtext">7. What activities does relationship management include?</div>
+  <label><input type="radio" name="q7" value="a">A. Budget planning and cost control</label>
+  <label><input type="radio" name="q7" value="b">B. Identification, analysis, monitoring, and improvement of relationships</label>
+  <label><input type="radio" name="q7" value="c">C. Technical support and troubleshooting</label>
+  <label><input type="radio" name="q7" value="d">D. Software development and testing</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="The purpose of supplier management is to ensure suppliers and their performances are managed appropriately to support seamless provision of quality products and services (2.pdf, page 10).">
+  <div class="qtext">8. What is the purpose of supplier management?</div>
+  <label><input type="radio" name="q8" value="a">A. To reduce supplier costs</label>
+  <label><input type="radio" name="q8" value="b">B. To manage procurement processes</label>
+  <label><input type="radio" name="q8" value="c">C. To ensure suppliers support seamless provision of quality services</label>
+  <label><input type="radio" name="q8" value="d">D. To create supplier contracts</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Supplier management includes creating closer relationships with key suppliers to uncover new value and reduce failure risk (2.pdf, page 10).">
+  <div class="qtext">9. What does supplier management aim to achieve with key suppliers?</div>
+  <label><input type="radio" name="q9" value="a">A. Create closer relationships to uncover new value</label>
+  <label><input type="radio" name="q9" value="b">B. Reduce the number of suppliers</label>
+  <label><input type="radio" name="q9" value="c">C. Standardize all supplier contracts</label>
+  <label><input type="radio" name="q9" value="d">D. Eliminate dependency on suppliers</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Organizations should evaluate suppliers based on risk, importance and impact, and costs (2.pdf, page 12).">
+  <div class="qtext">10. What factors should organizations consider when evaluating suppliers?</div>
+  <label><input type="radio" name="q10" value="a">A. Only the cost of services</label>
+  <label><input type="radio" name="q10" value="b">B. Only the supplier's reputation</label>
+  <label><input type="radio" name="q10" value="c">C. Only the technical capabilities</label>
+  <label><input type="radio" name="q10" value="d">D. Risk, importance and impact, and costs</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="The purpose of IT asset management is to plan and manage the full lifecycle of all IT assets (2.pdf, page 14).">
+  <div class="qtext">11. What is the purpose of IT asset management?</div>
+  <label><input type="radio" name="q11" value="a">A. To track software licenses only</label>
+  <label><input type="radio" name="q11" value="b">B. To plan and manage the full lifecycle of all IT assets</label>
+  <label><input type="radio" name="q11" value="c">C. To manage IT department budgets</label>
+  <label><input type="radio" name="q11" value="d">D. To control access to IT resources</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="An IT asset is any financially valuable component that can contribute to the delivery of an IT product or service (2.pdf, page 15).">
+  <div class="qtext">12. How is an IT asset defined?</div>
+  <label><input type="radio" name="q12" value="a">A. Any hardware device owned by the organization</label>
+  <label><input type="radio" name="q12" value="b">B. Software applications only</label>
+  <label><input type="radio" name="q12" value="c">C. Any financially valuable component contributing to IT service delivery</label>
+  <label><input type="radio" name="q12" value="d">D. IT department personnel</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="IT asset management helps maximize value, control costs, manage risks, and support decision-making (2.pdf, page 14).">
+  <div class="qtext">13. What benefits does IT asset management provide?</div>
+  <label><input type="radio" name="q13" value="a">A. Only cost reduction</label>
+  <label><input type="radio" name="q13" value="b">B. Only compliance with regulations</label>
+  <label><input type="radio" name="q13" value="c">C. Only improved security</label>
+  <label><input type="radio" name="q13" value="d">D. Maximize value, control costs, manage risks, and support decision-making</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="The purpose of service configuration management is to ensure accurate and reliable information about service configurations is available when needed (2.pdf, page 17).">
+  <div class="qtext">14. What is the purpose of service configuration management?</div>
+  <label><input type="radio" name="q14" value="a">A. To ensure accurate information about service configurations is available</label>
+  <label><input type="radio" name="q14" value="b">B. To manage user access to configuration data</label>
+  <label><input type="radio" name="q14" value="c">C. To control changes to service documentation</label>
+  <label><input type="radio" name="q14" value="d">D. To backup configuration files</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="A configuration item (CI) is any component that needs to be managed to deliver an IT service (2.pdf, page 19).">
+  <div class="qtext">15. How is a configuration item (CI) defined?</div>
+  <label><input type="radio" name="q15" value="a">A. Any document related to IT services</label>
+  <label><input type="radio" name="q15" value="b">B. Any component that needs to be managed to deliver an IT service</label>
+  <label><input type="radio" name="q15" value="c">C. Only hardware components of IT systems</label>
+  <label><input type="radio" name="q15" value="d">D. Software applications and their licenses</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Service configuration management includes information on how CIs are configured and their relationships (2.pdf, page 18).">
+  <div class="qtext">16. What information does service configuration management maintain?</div>
+  <label><input type="radio" name="q16" value="a">A. Only hardware specifications</label>
+  <label><input type="radio" name="q16" value="b">B. Only software version numbers</label>
+  <label><input type="radio" name="q16" value="c">C. How CIs are configured and their relationships</label>
+  <label><input type="radio" name="q16" value="d">D. User access permissions only</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="The purpose of monitoring and event management is to systematically observe services and record changes of state identified as events (2.pdf, page 21).">
+  <div class="qtext">17. What is the purpose of monitoring and event management?</div>
+  <label><input type="radio" name="q17" value="a">A. To monitor staff performance</label>
+  <label><input type="radio" name="q17" value="b">B. To track project progress</label>
+  <label><input type="radio" name="q17" value="c">C. To manage security incidents</label>
+  <label><input type="radio" name="q17" value="d">D. To systematically observe services and record state changes</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="An event is any change of state that has significance for the management of a service or CI (2.pdf, page 22).">
+  <div class="qtext">18. How is an event defined in ITIL 4?</div>
+  <label><input type="radio" name="q18" value="a">A. Any change of state significant for service management</label>
+  <label><input type="radio" name="q18" value="b">B. Any incident reported by users</label>
+  <label><input type="radio" name="q18" value="c">C. Any scheduled maintenance activity</label>
+  <label><input type="radio" name="q18" value="d">D. Any change to service configuration</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Monitoring and event management identifies and prioritizes events and establishes appropriate responses (2.pdf, page 21).">
+  <div class="qtext">19. What does monitoring and event management identify and prioritize?</div>
+  <label><input type="radio" name="q19" value="a">A. Only security breaches</label>
+  <label><input type="radio" name="q19" value="b">B. Infrastructure, services, processes, and security events</label>
+  <label><input type="radio" name="q19" value="c">C. Only hardware failures</label>
+  <label><input type="radio" name="q19" value="d">D. Only performance metrics</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="The purpose of release management is to make new and changed services and features available for use (2.pdf, page 24).">
+  <div class="qtext">20. What is the purpose of release management?</div>
+  <label><input type="radio" name="q20" value="a">A. To manage software development projects</label>
+  <label><input type="radio" name="q20" value="b">B. To control access to released software</label>
+  <label><input type="radio" name="q20" value="c">C. To make new and changed services available for use</label>
+  <label><input type="radio" name="q20" value="d">D. To document release procedures</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="A release is a version of a service or CI, or collection of CIs, made available for use (2.pdf, page 25).">
+  <div class="qtext">21. How is a release defined?</div>
+  <label><input type="radio" name="q21" value="a">A. A new version of software only</label>
+  <label><input type="radio" name="q21" value="b">B. Any change to IT systems</label>
+  <label><input type="radio" name="q21" value="c">C. The deployment of hardware components</label>
+  <label><input type="radio" name="q21" value="d">D. A version of a service or CI made available for use</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="The purpose of deployment management is to move new or changed components to live environments (2.pdf, page 27).">
+  <div class="qtext">22. What is the purpose of deployment management?</div>
+  <label><input type="radio" name="q22" value="a">A. To move new or changed components to live environments</label>
+  <label><input type="radio" name="q22" value="b">B. To manage software development teams</label>
+  <label><input type="radio" name="q22" value="c">C. To control access to production systems</label>
+  <label><input type="radio" name="q22" value="d">D. To document deployment procedures</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Deployment management may also deploy components to other environments for testing or staging (2.pdf, page 27).">
+  <div class="qtext">23. What environments besides live environments might deployment management involve?</div>
+  <label><input type="radio" name="q23" value="a">A. Only development environments</label>
+  <label><input type="radio" name="q23" value="b">B. Testing or staging environments</label>
+  <label><input type="radio" name="q23" value="c">C. Only user acceptance testing environments</label>
+  <label><input type="radio" name="q23" value="d">D. Only backup environments</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Deployment approaches include phased deployment, continuous deployment, big bang deployment, and pull deployment (2.pdf, page 29).">
+  <div class="qtext">24. What approaches are used for deployment?</div>
+  <label><input type="radio" name="q24" value="a">A. Only automated deployment</label>
+  <label><input type="radio" name="q24" value="b">B. Only manual deployment</label>
+  <label><input type="radio" name="q24" value="c">C. Phased, continuous, big bang, and pull deployment</label>
+  <label><input type="radio" name="q24" value="d">D. Only scheduled deployment</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="The purpose of incident management is to minimize negative impact by restoring normal service operation quickly (3.pdf, page 4).">
+  <div class="qtext">25. What is the purpose of incident management?</div>
+  <label><input type="radio" name="q25" value="a">A. To prevent all service interruptions</label>
+  <label><input type="radio" name="q25" value="b">B. To identify root causes of problems</label>
+  <label><input type="radio" name="q25" value="c">C. To manage user complaints</label>
+  <label><input type="radio" name="q25" value="d">D. To minimize negative impact by restoring normal service</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="An incident is an unplanned interruption to a service or reduction in service quality (3.pdf, page 5).">
+  <div class="qtext">26. How is an incident defined?</div>
+  <label><input type="radio" name="q26" value="a">A. An unplanned interruption or reduction in service quality</label>
+  <label><input type="radio" name="q26" value="b">B. Any user request for assistance</label>
+  <label><input type="radio" name="q26" value="c">C. A planned service outage</label>
+  <label><input type="radio" name="q26" value="d">D. A security breach</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Incidents should be prioritized based on agreed classification to resolve highest business impact first (3.pdf, page 6).">
+  <div class="qtext">27. How should incidents be prioritized?</div>
+  <label><input type="radio" name="q27" value="a">A. Based on who reported the incident</label>
+  <label><input type="radio" name="q27" value="b">B. Based on business impact with highest impact resolved first</label>
+  <label><input type="radio" name="q27" value="c">C. Based on technical complexity</label>
+  <label><input type="radio" name="q27" value="d">D. Based on time of reporting</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Incident routing is typically based on incident category to identify the correct support team (3.pdf, page 7).">
+  <div class="qtext">28. What is incident routing typically based on?</div>
+  <label><input type="radio" name="q28" value="a">A. The seniority of the person reporting</label>
+  <label><input type="radio" name="q28" value="b">B. The time of day</label>
+  <label><input type="radio" name="q28" value="c">C. Incident category</label>
+  <label><input type="radio" name="q28" value="d">D. System availability</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Modern incident management tools can provide automated matching, intelligent analysis, and generate recommendations (3.pdf, page 8).">
+  <div class="qtext">29. What capabilities do modern incident management tools provide?</div>
+  <label><input type="radio" name="q29" value="a">A. Only basic logging functionality</label>
+  <label><input type="radio" name="q29" value="b">B. Only email notifications</label>
+  <label><input type="radio" name="q29" value="c">C. Only reporting features</label>
+  <label><input type="radio" name="q29" value="d">D. Automated matching, intelligent analysis, and recommendations</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Swarming involves many stakeholders working together initially until the best person to continue is identified (3.pdf, page 14).">
+  <div class="qtext">30. What is swarming in incident management?</div>
+  <label><input type="radio" name="q30" value="a">A. Multiple stakeholders working together initially</label>
+  <label><input type="radio" name="q30" value="b">B. Automated incident resolution</label>
+  <label><input type="radio" name="q30" value="c">C. Escalating incidents to management</label>
+  <label><input type="radio" name="q30" value="d">D. Outsourcing incident resolution</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="The purpose of problem management is to reduce likelihood and impact of incidents by identifying causes and managing workarounds (3.pdf, page 18).">
+  <div class="qtext">31. What is the purpose of problem management?</div>
+  <label><input type="radio" name="q31" value="a">A. To resolve incidents quickly</label>
+  <label><input type="radio" name="q31" value="b">B. To reduce incident likelihood and impact by identifying causes</label>
+  <label><input type="radio" name="q31" value="c">C. To manage user complaints about services</label>
+  <label><input type="radio" name="q31" value="d">D. To document all service issues</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="A problem is a cause, or potential cause, of one or more incidents (3.pdf, page 19).">
+  <div class="qtext">32. How is a problem defined?</div>
+  <label><input type="radio" name="q32" value="a">A. Any service interruption</label>
+  <label><input type="radio" name="q32" value="b">B. A user complaint</label>
+  <label><input type="radio" name="q32" value="c">C. A cause or potential cause of incidents</label>
+  <label><input type="radio" name="q32" value="d">D. A technical difficulty</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="A known error is a problem that has been analyzed but has not been resolved (3.pdf, page 19).">
+  <div class="qtext">33. What is a known error?</div>
+  <label><input type="radio" name="q33" value="a">A. An incident that recurs frequently</label>
+  <label><input type="radio" name="q33" value="b">B. A problem with no solution</label>
+  <label><input type="radio" name="q33" value="c">C. A documented procedure</label>
+  <label><input type="radio" name="q33" value="d">D. A problem analyzed but not resolved</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="The phases of problem management are problem identification, problem control, and error control (3.pdf, page 20).">
+  <div class="qtext">34. What are the phases of problem management?</div>
+  <label><input type="radio" name="q34" value="a">A. Problem identification, problem control, error control</label>
+  <label><input type="radio" name="q34" value="b">B. Detection, analysis, resolution</label>
+  <label><input type="radio" name="q34" value="c">C. Reporting, investigation, closure</label>
+  <label><input type="radio" name="q34" value="d">D. Identification, documentation, review</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="A workaround is a solution that reduces or eliminates impact when full resolution isn't available (3.pdf, page 23).">
+  <div class="qtext">35. What is a workaround?</div>
+  <label><input type="radio" name="q35" value="a">A. A temporary fix that becomes permanent</label>
+  <label><input type="radio" name="q35" value="b">B. A solution that reduces impact when full resolution isn't available</label>
+  <label><input type="radio" name="q35" value="c">C. A documented procedure for incident resolution</label>
+  <label><input type="radio" name="q35" value="d">D. An alternative service offering</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="The purpose of service request management is to support service quality by handling predefined user-initiated requests effectively (3.pdf, page 28).">
+  <div class="qtext">36. What is the purpose of service request management?</div>
+  <label><input type="radio" name="q36" value="a">A. To manage all user communications</label>
+  <label><input type="radio" name="q36" value="b">B. To handle customer complaints</label>
+  <label><input type="radio" name="q36" value="c">C. To support service quality by handling predefined user requests</label>
+  <label><input type="radio" name="q36" value="d">D. To manage project requests</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="A service request initiates a service action agreed as normal part of service delivery (3.pdf, page 29).">
+  <div class="qtext">37. How is a service request defined?</div>
+  <label><input type="radio" name="q37" value="a">A. Any request from a user</label>
+  <label><input type="radio" name="q37" value="b">B. A request for new service development</label>
+  <label><input type="radio" name="q37" value="c">C. An emergency change request</label>
+  <label><input type="radio" name="q37" value="d">D. A request that initiates agreed service action</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Service requests may include service delivery actions, information, resource provision, access, and feedback (3.pdf, page 30).">
+  <div class="qtext">38. What can service requests include?</div>
+  <label><input type="radio" name="q38" value="a">A. Service actions, information, resources, access, feedback</label>
+  <label><input type="radio" name="q38" value="b">B. Only software installation requests</label>
+  <label><input type="radio" name="q38" value="c">C. Only hardware replacement requests</label>
+  <label><input type="radio" name="q38" value="d">D. Only access permission requests</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Requests should be standardized and automated to the greatest degree possible (3.pdf, page 31).">
+  <div class="qtext">39. How should service requests be handled?</div>
+  <label><input type="radio" name="q39" value="a">A. Manually for better control</label>
+  <label><input type="radio" name="q39" value="b">B. Standardized and automated as much as possible</label>
+  <label><input type="radio" name="q39" value="c">C. Only through formal approval processes</label>
+  <label><input type="radio" name="q39" value="d">D. Only by senior staff members</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="The purpose of the service desk is to capture demand for incident resolution and service requests (3.pdf, page 36).">
+  <div class="qtext">40. What is the purpose of the service desk?</div>
+  <label><input type="radio" name="q40" value="a">A. To manage all IT operations</label>
+  <label><input type="radio" name="q40" value="b">B. To develop new services</label>
+  <label><input type="radio" name="q40" value="c">C. To capture demand for incident resolution and service requests</label>
+  <label><input type="radio" name="q40" value="d">D. To provide technical training</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="The service desk should be the entry point and single point of contact for users (3.pdf, page 36).">
+  <div class="qtext">41. What role should the service desk play for users?</div>
+  <label><input type="radio" name="q41" value="a">A. Only handle simple queries</label>
+  <label><input type="radio" name="q41" value="b">B. Only manage incidents</label>
+  <label><input type="radio" name="q41" value="c">C. Only process service requests</label>
+  <label><input type="radio" name="q41" value="d">D. Be the entry point and single point of contact</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Service desk staff should have customer service skills, empathy, communication, and emotional intelligence (3.pdf, page 41).">
+  <div class="qtext">42. What skills should service desk staff have?</div>
+  <label><input type="radio" name="q42" value="a">A. Customer service, empathy, communication, emotional intelligence</label>
+  <label><input type="radio" name="q42" value="b">B. Only technical troubleshooting skills</label>
+  <label><input type="radio" name="q42" value="c">C. Only programming skills</label>
+  <label><input type="radio" name="q42" value="d">D. Only management skills</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="The purpose of continual improvement is to align practices and services with changing business needs (4.pdf, page 3).">
+  <div class="qtext">43. What is the purpose of continual improvement?</div>
+  <label><input type="radio" name="q43" value="a">A. To reduce costs continuously</label>
+  <label><input type="radio" name="q43" value="b">B. To align practices and services with changing business needs</label>
+  <label><input type="radio" name="q43" value="c">C. To implement new technologies</label>
+  <label><input type="radio" name="q43" value="d">D. To train staff regularly</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Continual improvement applies to the organization's SVS and all products, services, components and relationships (4.pdf, page 7).">
+  <div class="qtext">44. What does continual improvement apply to?</div>
+  <label><input type="radio" name="q44" value="a">A. Only IT services</label>
+  <label><input type="radio" name="q44" value="b">B. Only customer-facing services</label>
+  <label><input type="radio" name="q44" value="c">C. The SVS and all products, services, components and relationships</label>
+  <label><input type="radio" name="q44" value="d">D. Only internal processes</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="The continual improvement model steps are: What is the vision?, Where are we now?, Where do we want to be?, How do we get there?, Take action, Did we get there?, How do we keep momentum? (4.pdf, page 6).">
+  <div class="qtext">45. What are the steps in the continual improvement model?</div>
+  <label><input type="radio" name="q45" value="a">A. Plan, Do, Check, Act</label>
+  <label><input type="radio" name="q45" value="b">B. Identify, Analyze, Develop, Implement</label>
+  <label><input type="radio" name="q45" value="c">C. Assess, Plan, Implement, Review</label>
+  <label><input type="radio" name="q45" value="d">D. What is vision?, Where are we now?, Where to be?, How get there?, Take action, Did we get there?, Keep momentum</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="A CSF is a necessary precondition for achieving intended results, while a KPI is a metric used to evaluate success (4.pdf, page 11).">
+  <div class="qtext">46. What is the difference between CSF and KPI?</div>
+  <label><input type="radio" name="q46" value="a">A. CSF is precondition for results, KPI measures success</label>
+  <label><input type="radio" name="q46" value="b">B. CSF measures performance, KPI sets targets</label>
+  <label><input type="radio" name="q46" value="c">C. CSF is for strategic goals, KPI for operational goals</label>
+  <label><input type="radio" name="q46" value="d">D. There is no difference</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Organizations can use a Continual Improvement Register (CIR) to track improvement ideas and projects (4.pdf, page 17).">
+  <div class="qtext">47. How can organizations track continual improvement?</div>
+  <label><input type="radio" name="q47" value="a">A. Through annual performance reviews</label>
+  <label><input type="radio" name="q47" value="b">B. Using a Continual Improvement Register (CIR)</label>
+  <label><input type="radio" name="q47" value="c">C. Through customer surveys only</label>
+  <label><input type="radio" name="q47" value="d">D. Using financial reports</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Everyone in the organization is responsible for continual improvement (4.pdf, page 18).">
+  <div class="qtext">48. Who is responsible for continual improvement?</div>
+  <label><input type="radio" name="q48" value="a">A. Only senior management</label>
+  <label><input type="radio" name="q48" value="b">B. Only the IT department</label>
+  <label><input type="radio" name="q48" value="c">C. Everyone in the organization</label>
+  <label><input type="radio" name="q48" value="d">D. Only quality assurance teams</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="The purpose of service level management is to set clear business-based targets and ensure service delivery is assessed against them (5.pdf, page 4).">
+  <div class="qtext">49. What is the purpose of service level management?</div>
+  <label><input type="radio" name="q49" value="a">A. To manage service desk performance</label>
+  <label><input type="radio" name="q49" value="b">B. To set technical performance standards</label>
+  <label><input type="radio" name="q49" value="c">C. To negotiate supplier contracts</label>
+  <label><input type="radio" name="q49" value="d">D. To set business-based targets and assess service delivery</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="A service level is one or more metrics that define expected or achieved service quality (5.pdf, page 5).">
+  <div class="qtext">50. How is service level defined?</div>
+  <label><input type="radio" name="q50" value="a">A. Metrics defining expected or achieved service quality</label>
+  <label><input type="radio" name="q50" value="b">B. The cost of delivering services</label>
+  <label><input type="radio" name="q50" value="c">C. User satisfaction ratings</label>
+  <label><input type="radio" name="q50" value="d">D. Technical specifications of services</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="An SLA is a documented agreement between service provider and customer identifying services and expected service levels (5.pdf, page 8).">
+  <div class="qtext">51. What is a Service Level Agreement (SLA)?</div>
+  <label><input type="radio" name="q51" value="a">A. A technical specification document</label>
+  <label><input type="radio" name="q51" value="b">B. A documented agreement between provider and customer</label>
+  <label><input type="radio" name="q51" value="c">C. An internal performance target</label>
+  <label><input type="radio" name="q51" value="d">D. A supplier contract</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="The Watermelon SLA effect refers to cases where SLA appears green but customer satisfaction is red (5.pdf, page 10).">
+  <div class="qtext">52. What is the Watermelon SLA effect?</div>
+  <label><input type="radio" name="q52" value="a">A. When SLAs are too complex</label>
+  <label><input type="radio" name="q52" value="b">B. When SLAs are not monitored</label>
+  <label><input type="radio" name="q52" value="c">C. When SLA appears met but customer satisfaction is low</label>
+  <label><input type="radio" name="q52" value="d">D. When SLAs are too expensive to implement</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Service level management uses both operational metrics (availability, response times) and business metrics (5.pdf, page 13).">
+  <div class="qtext">53. What types of metrics does service level management use?</div>
+  <label><input type="radio" name="q53" value="a">A. Only technical metrics</label>
+  <label><input type="radio" name="q53" value="b">B. Only financial metrics</label>
+  <label><input type="radio" name="q53" value="c">C. Only customer satisfaction metrics</label>
+  <label><input type="radio" name="q53" value="d">D. Operational metrics and business metrics</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="The purpose of change enablement is to maximize successful changes by ensuring risks are assessed and changes authorized (5.pdf, page 15).">
+  <div class="qtext">54. What is the purpose of change enablement?</div>
+  <label><input type="radio" name="q54" value="a">A. To maximize successful changes by ensuring risk assessment</label>
+  <label><input type="radio" name="q54" value="b">B. To prevent all changes to production systems</label>
+  <label><input type="radio" name="q54" value="c">C. To manage organizational restructuring</label>
+  <label><input type="radio" name="q54" value="d">D. To document all system modifications</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="A change is the addition, modification, or removal of anything that could affect services (5.pdf, page 17).">
+  <div class="qtext">55. How is a change defined?</div>
+  <label><input type="radio" name="q55" value="a">A. Any new service development</label>
+  <label><input type="radio" name="q55" value="b">B. Addition, modification, or removal affecting services</label>
+  <label><input type="radio" name="q55" value="c">C. Only emergency repairs</label>
+  <label><input type="radio" name="q55" value="d">D. Only software updates</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Change enablement scope can include infrastructure, applications, documentation, processes, and supplier relationships (5.pdf, page 18).">
+  <div class="qtext">56. What can be included in change enablement scope?</div>
+  <label><input type="radio" name="q56" value="a">A. Only hardware changes</label>
+  <label><input type="radio" name="q56" value="b">B. Only software changes</label>
+  <label><input type="radio" name="q56" value="c">C. Infrastructure, applications, documentation, processes, supplier relationships</label>
+  <label><input type="radio" name="q56" value="d">D. Only security-related changes</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Change enablement focuses on products and services, while organizational change management manages people aspects (5.pdf, page 19).">
+  <div class="qtext">57. How does change enablement differ from organizational change management?</div>
+  <label><input type="radio" name="q57" value="a">A. They are the same practice</label>
+  <label><input type="radio" name="q57" value="b">B. Change enablement is for IT, organizational change for business</label>
+  <label><input type="radio" name="q57" value="c">C. Change enablement is strategic, organizational change is tactical</label>
+  <label><input type="radio" name="q57" value="d">D. Change enablement focuses on products/services, organizational change on people</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="A change authority is the person or group who authorizes a change (5.pdf, page 20).">
+  <div class="qtext">58. What is a change authority?</div>
+  <label><input type="radio" name="q58" value="a">A. The person or group who authorizes a change</label>
+  <label><input type="radio" name="q58" value="b">B. The person who implements changes</label>
+  <label><input type="radio" name="q58" value="c">C. The document describing change procedures</label>
+  <label><input type="radio" name="q58" value="d">D. The system used to track changes</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="The three types of change are standard, normal, and emergency changes (5.pdf, page 22).">
+  <div class="qtext">59. What are the three types of change?</div>
+  <label><input type="radio" name="q59" value="a">A. Major, minor, trivial</label>
+  <label><input type="radio" name="q59" value="b">B. Standard, normal, emergency</label>
+  <label><input type="radio" name="q59" value="c">C. Planned, unplanned, emergency</label>
+  <label><input type="radio" name="q59" value="d">D. Technical, business, operational</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Standard changes are low-risk, pre-authorized, well understood and documented (5.pdf, page 22).">
+  <div class="qtext">60. What characterizes standard changes?</div>
+  <label><input type="radio" name="q60" value="a">A. High risk and complex</label>
+  <label><input type="radio" name="q60" value="b">B. Require management approval</label>
+  <label><input type="radio" name="q60" value="c">C. Low-risk, pre-authorized, well understood</label>
+  <label><input type="radio" name="q60" value="d">D. Implemented immediately without documentation</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Normal changes need to be scheduled, assessed and authorized following a process (5.pdf, page 22).">
+  <div class="qtext">61. How are normal changes managed?</div>
+  <label><input type="radio" name="q61" value="a">A. Without any formal process</label>
+  <label><input type="radio" name="q61" value="b">B. With immediate implementation</label>
+  <label><input type="radio" name="q61" value="c">C. Only with technical team approval</label>
+  <label><input type="radio" name="q61" value="d">D. Scheduled, assessed and authorized following process</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Emergency changes must be implemented as soon as possible, e.g., to resolve incidents or implement security patches (5.pdf, page 22).">
+  <div class="qtext">62. When are emergency changes used?</div>
+  <label><input type="radio" name="q62" value="a">A. To resolve incidents or implement security patches urgently</label>
+  <label><input type="radio" name="q62" value="b">B. For routine maintenance</label>
+  <label><input type="radio" name="q62" value="c">C. For new feature development</label>
+  <label><input type="radio" name="q62" value="d">D. For cosmetic improvements</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="A change schedule can help plan changes, avoid conflicts, assign resources, and provide information for other practices (5.pdf, page 23).">
+  <div class="qtext">63. What is the purpose of a change schedule?</div>
+  <label><input type="radio" name="q63" value="a">A. To track project budgets</label>
+  <label><input type="radio" name="q63" value="b">B. To plan changes, avoid conflicts, assign resources</label>
+  <label><input type="radio" name="q63" value="c">C. To document change procedures</label>
+  <label><input type="radio" name="q63" value="d">D. To manage staff schedules</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Information security management includes authentication and non-repudiation aspects (2.pdf, page 5).">
+  <div class="qtext">64. What additional aspects does information security management include?</div>
+  <label><input type="radio" name="q64" value="a">A. Only data encryption</label>
+  <label><input type="radio" name="q64" value="b">B. Only access controls</label>
+  <label><input type="radio" name="q64" value="c">C. Authentication and non-repudiation</label>
+  <label><input type="radio" name="q64" value="d">D. Only network security</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Supplier management activities include creating single point of visibility, negotiating contracts, managing relationships and performance (2.pdf, page 11).">
+  <div class="qtext">65. What activities are included in supplier management?</div>
+  <label><input type="radio" name="q65" value="a">A. Only contract negotiation</label>
+  <label><input type="radio" name="q65" value="b">B. Only performance monitoring</label>
+  <label><input type="radio" name="q65" value="c">C. Only relationship management</label>
+  <label><input type="radio" name="q65" value="d">D. Creating visibility, negotiating contracts, managing relationships and performance</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="IT asset management supports decision-making about purchase, reuse, retirement and disposal of assets (2.pdf, page 14).">
+  <div class="qtext">66. How does IT asset management support decision-making?</div>
+  <label><input type="radio" name="q66" value="a">A. About purchase, reuse, retirement and disposal</label>
+  <label><input type="radio" name="q66" value="b">B. Only about new purchases</label>
+  <label><input type="radio" name="q66" value="c">C. Only about software licensing</label>
+  <label><input type="radio" name="q66" value="d">D. Only about hardware maintenance</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Monitoring and event management establishes appropriate responses to events and conditions indicating potential faults (2.pdf, page 21).">
+  <div class="qtext">67. What does monitoring and event management establish?</div>
+  <label><input type="radio" name="q67" value="a">A. Only event detection rules</label>
+  <label><input type="radio" name="q67" value="b">B. Appropriate responses to events and potential fault conditions</label>
+  <label><input type="radio" name="q67" value="c">C. Only performance thresholds</label>
+  <label><input type="radio" name="q67" value="d">D. Only security monitoring</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Deployment management works with change enablement and release management practices (2.pdf, page 28).">
+  <div class="qtext">68. Which practices does deployment management work with?</div>
+  <label><input type="radio" name="q68" value="a">A. Only incident management</label>
+  <label><input type="radio" name="q68" value="b">B. Only problem management</label>
+  <label><input type="radio" name="q68" value="c">C. Change enablement and release management</label>
+  <label><input type="radio" name="q68" value="d">D. Only service desk</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Incident management guidance includes designing for different incident types, prioritizing based on impact, and using robust tools (3.pdf, page 6).">
+  <div class="qtext">69. What does incident management guidance include?</div>
+  <label><input type="radio" name="q69" value="a">A. Only technical resolution steps</label>
+  <label><input type="radio" name="q69" value="b">B. Only communication procedures</label>
+  <label><input type="radio" name="q69" value="c">C. Only escalation paths</label>
+  <label><input type="radio" name="q69" value="d">D. Designing for types, prioritizing by impact, using tools</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Realistic target resolution times must be agreed, documented, and communicated for incidents (3.pdf, page 7).">
+  <div class="qtext">70. What must be done with incident target resolution times?</div>
+  <label><input type="radio" name="q70" value="a">A. Agreed, documented, and communicated</label>
+  <label><input type="radio" name="q70" value="b">B. Only estimated internally</label>
+  <label><input type="radio" name="q70" value="c">C. Only set by technical teams</label>
+  <label><input type="radio" name="q70" value="d">D. Only reviewed annually</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Good collaboration tools ensure effective collaboration between everyone working on an incident (3.pdf, page 9).">
+  <div class="qtext">71. Why are collaboration tools important in incident management?</div>
+  <label><input type="radio" name="q71" value="a">A. To replace human interaction</label>
+  <label><input type="radio" name="q71" value="b">B. To ensure effective collaboration between teams</label>
+  <label><input type="radio" name="q71" value="c">C. To automate incident resolution</label>
+  <label><input type="radio" name="q71" value="d">D. To track individual performance</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Third-party service components require support agreements aligning supplier obligations with provider commitments (3.pdf, page 15).">
+  <div class="qtext">72. What is needed for third-party service components?</div>
+  <label><input type="radio" name="q72" value="a">A. Only technical documentation</label>
+  <label><input type="radio" name="q72" value="b">B. Only contact information</label>
+  <label><input type="radio" name="q72" value="c">C. Support agreements aligning obligations with commitments</label>
+  <label><input type="radio" name="q72" value="d">D. Only payment terms</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Problem identification includes trend analysis, detecting recurring issues, major incident risks, and analyzing information from various sources (3.pdf, page 21).">
+  <div class="qtext">73. How are problems identified?</div>
+  <label><input type="radio" name="q73" value="a">A. Only through user reports</label>
+  <label><input type="radio" name="q73" value="b">B. Only through automated monitoring</label>
+  <label><input type="radio" name="q73" value="c">C. Only during major incidents</label>
+  <label><input type="radio" name="q73" value="d">D. Trend analysis, detecting recurring issues, major incident risks, various sources</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Problem control includes problem analysis, documenting workarounds, and managing known errors (3.pdf, page 22).">
+  <div class="qtext">74. What does problem control include?</div>
+  <label><input type="radio" name="q74" value="a">A. Problem analysis, documenting workarounds, known errors</label>
+  <label><input type="radio" name="q74" value="b">B. Only incident resolution</label>
+  <label><input type="radio" name="q74" value="c">C. Only technical investigation</label>
+  <label><input type="radio" name="q74" value="d">D. Only customer communication</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Error control activities include managing known errors, identifying solutions, reassessing status, and assessing impact (3.pdf, page 24).">
+  <div class="qtext">75. What are the main activities in error control?</div>
+  <label><input type="radio" name="q75" value="a">A. Only documenting errors</label>
+  <label><input type="radio" name="q75" value="b">B. Managing known errors, identifying solutions, reassessing, impact assessment</label>
+  <label><input type="radio" name="q75" value="c">C. Only implementing fixes</label>
+  <label><input type="radio" name="q75" value="d">D. Only communicating with users</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Service request management should establish policies for requests requiring limited or no additional approvals (3.pdf, page 31).">
+  <div class="qtext">76. What policies should service request management establish?</div>
+  <label><input type="radio" name="q76" value="a">A. Only for complex requests</label>
+  <label><input type="radio" name="q76" value="b">B. Only for emergency requests</label>
+  <label><input type="radio" name="q76" value="c">C. For requests requiring limited or no additional approvals</label>
+  <label><input type="radio" name="q76" value="d">D. Only for technical requests</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Service request management depends on well-designed processes and procedures operationalized through tracking and automation tools (3.pdf, page 32).">
+  <div class="qtext">77. What does service request management depend on?</div>
+  <label><input type="radio" name="q77" value="a">A. Only manual processes</label>
+  <label><input type="radio" name="q77" value="b">B. Only user training</label>
+  <label><input type="radio" name="q77" value="c">C. Only management approval</label>
+  <label><input type="radio" name="q77" value="d">D. Well-designed processes and procedures with tracking and automation</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Some service requests can be completely fulfilled by automation, creating self-service experience (3.pdf, page 32).">
+  <div class="qtext">78. How can service requests be fulfilled by automation?</div>
+  <label><input type="radio" name="q78" value="a">A. Completely fulfilled creating self-service experience</label>
+  <label><input type="radio" name="q78" value="b">B. Only partially automated</label>
+  <label><input type="radio" name="q78" value="c">C. Only for simple information requests</label>
+  <label><input type="radio" name="q78" value="d">D. Only with human oversight</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Service desk provisions include knowledge bases, service portals, catalogues, various communication channels, and AI capabilities (3.pdf, page 39).">
+  <div class="qtext">79. What provisions can a service desk include?</div>
+  <label><input type="radio" name="q79" value="a">A. Only phone support</label>
+  <label><input type="radio" name="q79" value="b">B. Knowledge bases, portals, catalogues, communication channels, AI</label>
+  <label><input type="radio" name="q79" value="c">C. Only email support</label>
+  <label><input type="radio" name="q79" value="d">D. Only in-person support</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Service desk support tools include intelligent telephony, workflow systems, knowledge bases, remote access, and configuration management (3.pdf, page 40).">
+  <div class="qtext">80. What tools support service desk operations?</div>
+  <label><input type="radio" name="q80" value="a">A. Only phone systems</label>
+  <label><input type="radio" name="q80" value="b">B. Only ticketing systems</label>
+  <label><input type="radio" name="q80" value="c">C. Intelligent telephony, workflow systems, knowledge bases, remote access, configuration management</label>
+  <label><input type="radio" name="q80" value="d">D. Only chat systems</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Continual improvement key activities include encouraging improvement, securing resources, identifying opportunities, assessment, coordination, measurement, planning, and business cases (4.pdf, page 4).">
+  <div class="qtext">81. What are key activities in continual improvement?</div>
+  <label><input type="radio" name="q81" value="a">A. Only project management</label>
+  <label><input type="radio" name="q81" value="b">B. Only performance monitoring</label>
+  <label><input type="radio" name="q81" value="c">C. Only problem resolution</label>
+  <label><input type="radio" name="q81" value="d">D. Encouraging improvement, securing resources, identifying opportunities, assessment, coordination, measurement, planning, business cases</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="The 'Where are we now?' step assesses current state including user perception, competencies, processes, technical capabilities, and culture (4.pdf, page 9).">
+  <div class="qtext">82. What does the 'Where are we now?' step assess?</div>
+  <label><input type="radio" name="q82" value="a">A. User perception, competencies, processes, technical capabilities, culture</label>
+  <label><input type="radio" name="q82" value="b">B. Only financial performance</label>
+  <label><input type="radio" name="q82" value="c">C. Only technical infrastructure</label>
+  <label><input type="radio" name="q82" value="d">D. Only customer satisfaction</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="The 'Where do we want to be?' step includes gap analysis and setting objectives with CSFs and KPIs (4.pdf, page 10).">
+  <div class="qtext">83. What does the 'Where do we want to be?' step include?</div>
+  <label><input type="radio" name="q83" value="a">A. Only vision statement</label>
+  <label><input type="radio" name="q83" value="b">B. Gap analysis and setting objectives with CSFs and KPIs</label>
+  <label><input type="radio" name="q83" value="c">C. Only budget planning</label>
+  <label><input type="radio" name="q83" value="d">D. Only resource allocation</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="The 'Take action' step can follow traditional waterfall or Agile approaches with experimentation and iteration (4.pdf, page 13).">
+  <div class="qtext">84. How can the 'Take action' step be approached?</div>
+  <label><input type="radio" name="q84" value="a">A. Only with detailed planning</label>
+  <label><input type="radio" name="q84" value="b">B. Only with sequential steps</label>
+  <label><input type="radio" name="q84" value="c">C. Traditional waterfall or Agile with experimentation</label>
+  <label><input type="radio" name="q84" value="d">D. Only after all approvals</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="The 'How do we keep momentum?' step involves marketing successes, reinforcing methods, and embedding changes (4.pdf, page 15).">
+  <div class="qtext">85. How is momentum maintained in continual improvement?</div>
+  <label><input type="radio" name="q85" value="a">A. Only through financial incentives</label>
+  <label><input type="radio" name="q85" value="b">B. Only through management pressure</label>
+  <label><input type="radio" name="q85" value="c">C. Only through regular meetings</label>
+  <label><input type="radio" name="q85" value="d">D. Marketing successes, reinforcing methods, embedding changes</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Service level management establishes shared view of services and target levels with customers (5.pdf, page 6).">
+  <div class="qtext">86. What does service level management establish with customers?</div>
+  <label><input type="radio" name="q86" value="a">A. Shared view of services and target levels</label>
+  <label><input type="radio" name="q86" value="b">B. Only technical specifications</label>
+  <label><input type="radio" name="q86" value="c">C. Only payment terms</label>
+  <label><input type="radio" name="q86" value="d">D. Only support hours</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Service level management performs service reviews to ensure services continue to meet organization and customer needs (5.pdf, page 6).">
+  <div class="qtext">87. Why does service level management perform service reviews?</div>
+  <label><input type="radio" name="q87" value="a">A. Only to reduce costs</label>
+  <label><input type="radio" name="q87" value="b">B. To ensure services continue to meet needs</label>
+  <label><input type="radio" name="q87" value="c">C. Only to document performance</label>
+  <label><input type="radio" name="q87" value="d">D. Only for compliance reporting</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Key SLA requirements include relation to defined service, clearly defined outcomes, agreement between parties, and simple writing (5.pdf, page 9).">
+  <div class="qtext">88. What are key requirements for SLAs?</div>
+  <label><input type="radio" name="q88" value="a">A. Only legal compliance</label>
+  <label><input type="radio" name="q88" value="b">B. Only technical details</label>
+  <label><input type="radio" name="q88" value="c">C. Relation to service, defined outcomes, agreement, simple writing</label>
+  <label><input type="radio" name="q88" value="d">D. Only financial terms</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Customer feedback can be gathered from surveys and key business-related measures (5.pdf, page 12).">
+  <div class="qtext">89. How can customer feedback be gathered?</div>
+  <label><input type="radio" name="q89" value="a">A. Only through formal meetings</label>
+  <label><input type="radio" name="q89" value="b">B. Only through complaint handling</label>
+  <label><input type="radio" name="q89" value="c">C. Only through service desk interactions</label>
+  <label><input type="radio" name="q89" value="d">D. Surveys and key business-related measures</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Change enablement protects customers and users from adverse effects of changes (5.pdf, page 16).">
+  <div class="qtext">90. How does change enablement protect customers?</div>
+  <label><input type="radio" name="q90" value="a">A. From adverse effects of changes</label>
+  <label><input type="radio" name="q90" value="b">B. Only from security breaches</label>
+  <label><input type="radio" name="q90" value="c">C. Only from service interruptions</label>
+  <label><input type="radio" name="q90" value="d">D. Only from cost increases</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="A change model is a repeatable approach to managing a particular type of change (5.pdf, page 17).">
+  <div class="qtext">91. What is a change model?</div>
+  <label><input type="radio" name="q91" value="a">A. A template for change documentation</label>
+  <label><input type="radio" name="q91" value="b">B. A repeatable approach to managing a type of change</label>
+  <label><input type="radio" name="q91" value="c">C. A list of approved changes</label>
+  <label><input type="radio" name="q91" value="d">D. A change tracking system</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Aligning change type with appropriate authority ensures the practice is both efficient and effective (5.pdf, page 21).">
+  <div class="qtext">92. Why align change type with appropriate authority?</div>
+  <label><input type="radio" name="q92" value="a">A. To increase bureaucracy</label>
+  <label><input type="radio" name="q92" value="b">B. To delay change implementation</label>
+  <label><input type="radio" name="q92" value="c">C. To ensure efficiency and effectiveness</label>
+  <label><input type="radio" name="q92" value="d">D. To reduce management involvement</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="ITIL 4 practices might be called capabilities, processes, or procedures in organizations, but ITIL defines them specifically (1.pdf, page 6).">
+  <div class="qtext">93. What might ITIL practices be called in organizations?</div>
+  <label><input type="radio" name="q93" value="a">A. Only procedures</label>
+  <label><input type="radio" name="q93" value="b">B. Only processes</label>
+  <label><input type="radio" name="q93" value="c">C. Only capabilities</label>
+  <label><input type="radio" name="q93" value="d">D. Capabilities, processes, or procedures</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="There are 34 ITIL management practices in total (1.pdf, page 8).">
+  <div class="qtext">94. How many ITIL management practices are there?</div>
+  <label><input type="radio" name="q94" value="a">A. 34</label>
+  <label><input type="radio" name="q94" value="b">B. 15</label>
+  <label><input type="radio" name="q94" value="c">C. 7</label>
+  <label><input type="radio" name="q94" value="d">D. 26</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="Some practices are examined at full depth (7 practices), while others require recalling purpose statements (8 practices) (1.pdf, page 8).">
+  <div class="qtext">95. How are ITIL practices examined in the Foundation certification?</div>
+  <label><input type="radio" name="q95" value="a">A. All practices at same depth</label>
+  <label><input type="radio" name="q95" value="b">B. Some at full depth, some require purpose recall</label>
+  <label><input type="radio" name="q95" value="c">C. Only technical practices</label>
+  <label><input type="radio" name="q95" value="d">D. Only service management practices</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Service level management skills include relationship management, business liaison, business analysis, commercial/supplier management, and pragmatic focus (5.pdf, page 7).">
+  <div class="qtext">96. What skills are required for service level management?</div>
+  <label><input type="radio" name="q96" value="a">A. Only technical skills</label>
+  <label><input type="radio" name="q96" value="b">B. Only financial skills</label>
+  <label><input type="radio" name="q96" value="c">C. Relationship management, business liaison, analysis, commercial, pragmatic focus</label>
+  <label><input type="radio" name="q96" value="d">D. Only legal skills</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="d" data-expl="Incident management does not usually include detailed diagnostic procedures but can provide techniques (3.pdf, page 12).">
+  <div class="qtext">97. What does incident management typically NOT include?</div>
+  <label><input type="radio" name="q97" value="a">A. Logging procedures</label>
+  <label><input type="radio" name="q97" value="b">B. Prioritization methods</label>
+  <label><input type="radio" name="q97" value="c">C. Escalation paths</label>
+  <label><input type="radio" name="q97" value="d">D. Detailed diagnostic and resolution procedures</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="a" data-expl="Problem management interfaces with risk management, knowledge management, change enablement, and continual improvement (3.pdf, page 26).">
+  <div class="qtext">98. Which practices does problem management interface with?</div>
+  <label><input type="radio" name="q98" value="a">A. Risk management, knowledge management, change enablement, continual improvement</label>
+  <label><input type="radio" name="q98" value="b">B. Only incident management</label>
+  <label><input type="radio" name="q98" value="c">C. Only service desk</label>
+  <label><input type="radio" name="q98" value="d">D. Only supplier management</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="b" data-expl="When new service requests are added to catalogue, existing workflow models should be leveraged when possible (3.pdf, page 32).">
+  <div class="qtext">99. How should new service requests be added to the service catalogue?</div>
+  <label><input type="radio" name="q99" value="a">A. Always create new workflows</label>
+  <label><input type="radio" name="q99" value="b">B. Leverage existing workflow models when possible</label>
+  <label><input type="radio" name="q99" value="c">C. Only through custom development</label>
+  <label><input type="radio" name="q99" value="d">D. Without any standardization</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+
+<div class="question" data-correct="c" data-expl="Service desks have major influence on user experience and how the service provider is perceived (3.pdf, page 38).">
+  <div class="qtext">100. Why is the service desk important for user experience?</div>
+  <label><input type="radio" name="q100" value="a">A. It only handles technical issues</label>
+  <label><input type="radio" name="q100" value="b">B. It only processes requests</label>
+  <label><input type="radio" name="q100" value="c">C. It has major influence on user experience and provider perception</label>
+  <label><input type="radio" name="q100" value="d">D. It only provides information</label>
+  <button onclick="checkOne(this)">Check Answer</button>
+  <div class="explanation"></div>
+</div>
+</div>
+
+<script>
+function checkOne(btn){
+  const q=btn.parentElement;
+  const correct=q.dataset.correct;
+  const expl=q.dataset.expl;
+  const selected=q.querySelector('input[type=radio]:checked');
+  const labels=q.querySelectorAll('label');
+  labels.forEach(l=>l.classList.remove('correct','wrong'));
+  const exp=q.querySelector('.explanation');
+  exp.style.display='block';
+  if(!selected){
+    exp.className='explanation wrong';
+    exp.innerHTML='Please select an answer first.';
+    return;
+  }
+  const val=selected.value;
+  if(val===correct){
+    selected.parentElement.classList.add('correct');
+    exp.className='explanation correct';
+    exp.innerHTML='<strong>✅ Correct!</strong> '+expl;
+  } else {
+    selected.parentElement.classList.add('wrong');
+    exp.className='explanation wrong';
+    exp.innerHTML='<strong>❌ Incorrect.</strong> '+expl;
+  }
+}
+</script>
+</body>
+</html>
